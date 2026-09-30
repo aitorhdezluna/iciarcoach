@@ -43,4 +43,12 @@
     if (e.isIntersecting) { e.target.classList.add('in', 'draw'); io.unobserve(e.target); }
   }), { threshold: .25 });
   d.querySelectorAll('.reveal, .end__line').forEach(el => io.observe(el));
+
+  /* testimonios */
+  const vs=[...d.querySelectorAll('.voz')], vn=d.getElementById('vocesNav');
+  if(vs.length>1){
+    vn.hidden=false; let k=0;
+    const show=n=>{k=(n+vs.length)%vs.length;vs.forEach((v,i)=>v.classList.toggle('is-on',i===k));d.getElementById('vCount').textContent=String(k+1).padStart(2,'0')+' / '+String(vs.length).padStart(2,'0')};
+    d.getElementById('vPrev').onclick=()=>show(k-1);d.getElementById('vNext').onclick=()=>show(k+1);
+  }
 })();

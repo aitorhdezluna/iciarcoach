@@ -26,13 +26,13 @@
 <link rel="preload" href="fonts/manrope-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="css/styles.css">
 <script>document.documentElement.classList.add('js')</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"Icíar Alonso Coach","description":"Acompañamiento emocional para transitar cambios internos profundos.","url":"https://iciarcoach.es/","email":"info@iciaralonsocoach.com"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"Icíar Alonso Coach","description":"Acompañamiento emocional para transitar cambios internos profundos.","url":"https://iciarcoach.es/","email":"info@iciaralonsocoach.com","sameAs":["https://www.instagram.com/iciar_coach/"]}</script>
 </head>
 <body>
 <a class="skip" href="#principal">Saltar al contenido</a>
 
 <header class="bar" id="bar">
-  <a class="bar__mark" href="#inicio" aria-label="Caminar(se), inicio">Caminar(se)</a>
+  <a class="bar__mark" href="#inicio" aria-label="Icíar Coach, inicio">ICÍAR COACH</a>
   <button class="bar__btn" id="menuBtn" aria-expanded="false" aria-controls="menu">Menú</button>
 </header>
 <nav class="menu" id="menu" aria-label="Principal" hidden>
@@ -107,7 +107,7 @@
 </section>
 
 <section class="yo" id="quien-soy">
-  <figure class="yo__fig reveal"><img src="img/sonrisa.webp" alt="Icíar sonriendo, sentada en una escalera de troncos en el bosque" width="530" height="641" loading="lazy"></figure>
+  <figure class="yo__fig reveal"><img src="img/sonrisa.webp" alt="Icíar sonriendo, sentada en una escalera de troncos en el bosque" width="518" height="629" loading="lazy"></figure>
   <div class="yo__body">
     <h2 class="h2">Sobre mí</h2>
     <p class="lead">Soy Icíar. Y no trabajo desde fórmulas, sino desde la experiencia. También yo he transitado rupturas internas, identidades que se caen, decisiones que remueven todo.</p>
@@ -118,10 +118,15 @@
 <section class="voces" id="testimonios" aria-labelledby="voces-h">
   <h2 class="h2" id="voces-h">Lo dicen ellas</h2>
   <p class="voces__note">Testimonios reales compartidos de forma anónima, con el consentimiento de las personas acompañadas.</p>
-  <div class="voces__track" tabindex="0" role="group" aria-label="Testimonios, desliza para leer más">
-    <blockquote><p>“La confianza en mí misma ha crecido muchísimo. Aprendí a mirarme con amor, con paciencia, incluso con orgullo por decisiones que antes dudaba. Es duro, pero necesario. Esta profundidad solo está en procesos como este.”</p></blockquote>
-    <blockquote><p>“Por primera vez me comprometí con cada propuesta del proceso. Incluso lo que no entendía en el momento, luego cobraba sentido. Sentí que Icíar se adaptaba a mí, sin forzarme. Y el espacio físico, esos pasos entre árboles, fue parte de la transformación.”</p></blockquote>
-    <blockquote><p>“Acogimiento. Refugio. Claridad. Honestidad. Pasión. Así describiría lo que viví aquí. Sin juicio, con sostén. Lo recomiendo siempre que alguien me cuenta que se siente perdida.”</p></blockquote>
+  <div class="voces__stage" id="vocesStage" aria-roledescription="carrusel" aria-label="Testimonios">
+    <blockquote class="voz is-on" aria-label="Testimonio 1 de 3"><p>“La confianza en mí misma ha crecido muchísimo. Aprendí a mirarme con amor, con paciencia, incluso con orgullo por decisiones que antes dudaba. Es duro, pero necesario. Esta profundidad solo está en procesos como este.”</p></blockquote>
+    <blockquote class="voz" aria-label="Testimonio 2 de 3"><p>“Por primera vez me comprometí con cada propuesta del proceso. Incluso lo que no entendía en el momento, luego cobraba sentido. Sentí que Icíar se adaptaba a mí, sin forzarme. Y el espacio físico, esos pasos entre árboles, fue parte de la transformación.”</p></blockquote>
+    <blockquote class="voz" aria-label="Testimonio 3 de 3"><p>“Acogimiento. Refugio. Claridad. Honestidad. Pasión. Así describiría lo que viví aquí. Sin juicio, con sostén. Lo recomiendo siempre que alguien me cuenta que se siente perdida.”</p></blockquote>
+  </div>
+  <div class="voces__nav" id="vocesNav" hidden>
+    <button type="button" id="vPrev" aria-label="Testimonio anterior">←</button>
+    <span id="vCount" aria-live="polite">01 / 03</span>
+    <button type="button" id="vNext" aria-label="Testimonio siguiente">→</button>
   </div>
 </section>
 
@@ -148,9 +153,10 @@
   <p class="end__a">Caminar(se) no es un proceso para cambiar quién eres, sino para volver a ti, con todo lo que eres ahora.</p>
   <p class="end__b">Caminar(se) empieza con un primer paso.</p>
   <a class="btn btn--light" href="https://wa.link/zugo5a" rel="noopener">Quiero dar el primer paso</a>
-  <p class="end__c"><a href="mailto:info@iciaralonsocoach.com">info@iciaralonsocoach.com</a> <a href="https://wa.link/zugo5a" rel="noopener">WhatsApp</a></p>
+  <p class="end__c"><a href="mailto:info@iciaralonsocoach.com">info@iciaralonsocoach.com</a> <a href="https://wa.link/zugo5a" rel="noopener">WhatsApp</a> <a href="https://www.instagram.com/iciar_coach/" rel="noopener" target="_blank">Instagram <span class="sr">(se abre en una pestaña nueva)</span></a></p>
   <svg class="end__line" viewBox="0 0 600 40" aria-hidden="true" focusable="false"><path d="M0 22 C100 2 160 40 280 20 S480 2 600 20"/></svg>
   <p class="end__sign">Icíar Alonso · Coach</p>
+  <p class="end__legal">© 2026 Icíar Alonso Coach. Todos los derechos reservados.<br>Web hecha por <a href="https://www.aitorhernandez.es" rel="noopener" target="_blank">Aitor Hernandez<span class="sr"> (se abre en una pestaña nueva)</span></a></p>
 </footer>
 <script src="js/main.js" defer></script>
 </body>

@@ -15,7 +15,7 @@ em{font-style:italic}
 /* barra */
 .bar{position:fixed;inset:0 0 auto;z-index:20;display:flex;justify-content:space-between;align-items:center;padding:calc(1.1rem + env(safe-area-inset-top)) var(--pad) 1rem;color:var(--marfil);mix-blend-mode:normal;transition:transform .5s var(--ease)}
 .bar.is-hidden{transform:translateY(-110%)}
-.bar__mark{font:italic 400 1.25rem var(--serif);text-decoration:none}
+.bar__mark{font:400 .95rem var(--serif);letter-spacing:.28em;text-decoration:none}
 .bar__btn{background:none;border:0;color:inherit;font:600 .8rem var(--sans);letter-spacing:.14em;text-transform:lowercase;padding:.6rem 0;cursor:pointer;border-bottom:1px solid currentColor}
 .menu{position:fixed;inset:0;z-index:15;background:var(--bosque);color:var(--marfil);display:flex;align-items:center;padding:var(--pad)}
 .menu[hidden]{display:none}
@@ -92,13 +92,17 @@ em{font-style:italic}
 .yo .h2{margin-bottom:1.5rem}.yo .lead{margin-bottom:1.5rem}.yo__body>p:last-child{max-width:34rem}
 
 /* testimonios */
-.voces{background:var(--salvia);padding:6rem 0 6rem}
-.voces .h2,.voces__note{padding:0 var(--pad)}
-.voces__note{margin:1rem 0 3rem;max-width:32rem;font-size:.95rem}
-.voces__track{display:flex;gap:3rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:0 var(--pad) 1rem;scrollbar-width:none}
-.voces__track::-webkit-scrollbar{display:none}
-blockquote{flex:0 0 min(86vw,34rem);scroll-snap-align:start}
-blockquote p{font:300 clamp(1.3rem,4.6vw,1.75rem)/1.45 var(--serif)}
+.voces{background:var(--salvia);padding:6rem var(--pad)}
+.voces__note{margin:1rem 0 4rem;max-width:32rem;font-size:.95rem}
+.voces__stage{display:grid}
+blockquote{grid-area:1/1}
+blockquote p{font:300 clamp(1.45rem,5.2vw,2.6rem)/1.35 var(--serif);max-width:26em;letter-spacing:-.01em}
+.js .voz{opacity:0;visibility:hidden;transform:translateY(.8rem);transition:opacity .7s var(--ease),transform .7s var(--ease),visibility 0s .7s}
+.js .voz.is-on{opacity:1;visibility:visible;transform:none;transition-delay:0s}
+.voces__nav{display:flex;align-items:center;gap:1.5rem;margin-top:3.5rem;font-size:.85rem;letter-spacing:.14em}
+.voces__nav button{width:3rem;height:3rem;border-radius:50%;border:1px solid var(--carbon);background:none;color:inherit;font-size:1.1rem;cursor:pointer;transition:background .3s,color .3s}
+.voces__nav button:hover{background:var(--carbon);color:var(--salvia)}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 
 /* faq */
 .faq{padding:7rem var(--pad);max-width:60rem}
@@ -129,10 +133,12 @@ details p{padding:0 0 1.6rem;max-width:40rem}
 .end__line path{fill:none;stroke:var(--salvia);stroke-width:1.2;stroke-dasharray:700;stroke-dashoffset:700;transition:stroke-dashoffset 2.6s var(--ease)}
 .end__line.draw path{stroke-dashoffset:0}
 .end__sign{font-size:.72rem;letter-spacing:.3em;opacity:.6}
+.end__legal{font-size:.8rem;opacity:.7;line-height:1.8;border-top:1px solid rgba(244,240,231,.2);padding-top:1.5rem;width:100%;margin-top:1rem}
+.end__legal a{text-underline-offset:3px}
 
 /* reveal de imagen */
-.js .reveal{clip-path:inset(0 0 100% 0);transition:clip-path 1.5s var(--ease)}
-.js .reveal.in{clip-path:inset(0)}
+.js .reveal img{clip-path:inset(0 0 100% 0);transition:clip-path 1.5s var(--ease)}
+.js .reveal.in img{clip-path:inset(0)}
 
 @media(min-width:48em){
  body{font-size:1.125rem}
@@ -153,13 +159,13 @@ details p{padding:0 0 1.6rem;max-width:40rem}
  .call__h{max-width:12em}.call__p{max-width:26rem}
  .yo{grid-template-columns:5fr 6fr;align-items:center;gap:clamp(3rem,8vw,9rem);padding-block:10rem}
  .yo__fig{width:100%}
- .voces{padding-block:9rem}
+ .voces{padding-block:9rem}.voces__stage{max-width:62rem}
  .faq{margin-left:auto;margin-right:auto}
  .end{padding-top:12rem}
 }
 @media(prefers-reduced-motion:reduce){
  html{scroll-behavior:auto}
  *{transition-duration:.01ms!important}
- .js .line>span{transform:none}.js .reveal{clip-path:none}.pause__t .w{opacity:1}
+ .js .line>span{transform:none}.js .reveal img{clip-path:none}.pause__t .w{opacity:1}
  .end__line path{stroke-dashoffset:0}
 }
