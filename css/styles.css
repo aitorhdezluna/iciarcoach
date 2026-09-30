@@ -1,31 +1,48 @@
 /* ==========================================================================
-   CAMINAR(SE) — DESIGN SYSTEM & EDITORIAL STYLING
-   Paleta: Forest Green (#2E4A35), Warm Sand (#F5F2EB), Soft White (#FFFFFF), 
-   Charcoal (#2B2927), Muted Earth (#6E6A64), Terra Cotta (#8A5A44)
+   CAMINAR(SE) — MANUAL DE MARCA OFICIAL
+   Colores:
+   - Bosque:     #29483F (Principal, Identidad, Titulares, Botones)
+   - Salvia:     #A9BBAE (Secundario, Fondos, Bloques destacados)
+   - Marfil:     #F4F0E7 (Fondo principal, Limpieza, Calma)
+   - Terracota:  #B76F5C (Acento, Detalles, CTAs destacados)
+   - Arena:      #D6C7AA (Complementario, Texturas, Elementos gráficos)
+   - Carbón:     #252A27 (Texto, Cuerpo, Información)
+   
+   Tipografías:
+   - Títulos / Conceptos: Fraunces (Serif orgánica variable)
+   - Texto / Información / Botones: Manrope
+   - Microcopy / Numeración / Etiquetas: Manrope Mono
    ========================================================================== */
 
 :root {
-  /* Paleta cromática */
-  --color-bg-base: #f5f2eb;
+  /* Paleta cromática oficial */
+  --color-bosque: #29483f;
+  --color-salvia: #a9bbae;
+  --color-marfil: #f4f0e7;
+  --color-terracota: #b76f5c;
+  --color-arena: #d6c7aa;
+  --color-carbon: #252a27;
+
+  /* Asignaciones semánticas */
+  --color-bg-base: var(--color-marfil);
   --color-bg-pure: #ffffff;
-  --color-bg-alt: #ece8de;
-  --color-bg-card: #f9f7f2;
+  --color-bg-alt: #ece7dc;
+  --color-bg-salvia-soft: rgba(169, 187, 174, 0.18);
   
-  --color-primary: #2e4a35;
-  --color-primary-light: #3d6146;
-  --color-primary-dark: #1f3324;
+  --color-primary: var(--color-bosque);
+  --color-accent: var(--color-terracota);
   
-  --color-text-main: #2b2927;
-  --color-text-muted: #6e6a64;
-  --color-text-light: #8e8a83;
-  --color-accent-terracotta: #8a5a44;
+  --color-text-main: var(--color-carbon);
+  --color-text-muted: #575e59;
+  --color-text-light: #7c8580;
 
-  --color-border: rgba(46, 74, 53, 0.12);
-  --color-border-subtle: rgba(110, 106, 100, 0.15);
+  --color-border: rgba(41, 72, 63, 0.14);
+  --color-border-subtle: rgba(214, 199, 170, 0.4);
 
-  /* Tipografía */
-  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  /* Tipografías */
+  --font-serif: 'Fraunces', Georgia, serif;
   --font-sans: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'Manrope', monospace; /* Manrope con tabular-nums para emular Manrope Mono */
 
   /* Escala tipográfica fluida */
   --step--1: clamp(0.8125rem, 0.78rem + 0.15vw, 0.9375rem);
@@ -33,27 +50,26 @@
   --step-1: clamp(1.15rem, 1.05rem + 0.5vw, 1.35rem);
   --step-2: clamp(1.4rem, 1.25rem + 0.8vw, 1.75rem);
   --step-3: clamp(1.75rem, 1.5rem + 1.2vw, 2.35rem);
-  --step-4: clamp(2.2rem, 1.8rem + 1.8vw, 3.2rem);
+  --step-4: clamp(2.2rem, 1.8rem + 1.8vw, 3.25rem);
   --step-5: clamp(2.8rem, 2.2rem + 2.8vw, 4.5rem);
 
-  /* Espaciado */
+  /* Espaciado fluido */
   --space-2xs: clamp(0.5rem, 0.45rem + 0.25vw, 0.75rem);
   --space-xs: clamp(0.75rem, 0.7rem + 0.3vw, 1rem);
   --space-s: clamp(1rem, 0.9rem + 0.5vw, 1.5rem);
   --space-m: clamp(1.5rem, 1.3rem + 1vw, 2.5rem);
   --space-l: clamp(2.5rem, 2rem + 2vw, 4.5rem);
-  --space-xl: clamp(4rem, 3rem + 4vw, 7.5rem);
-  --space-2xl: clamp(5.5rem, 4rem + 6vw, 11rem);
+  --space-xl: clamp(4rem, 3rem + 4vw, 7rem);
+  --space-2xl: clamp(5.5rem, 4rem + 6vw, 10rem);
 
   /* Contenedores */
   --max-width-site: 1320px;
   --max-width-narrow: 820px;
   --max-width-reading: 680px;
 
-  /* Transiciones */
+  /* Transición suave */
   --ease-editorial: cubic-bezier(0.25, 1, 0.5, 1);
   --transition-fast: 0.25s var(--ease-editorial);
-  --transition-slow: 0.8s var(--ease-editorial);
 }
 
 /* --------------------------------------------------------------------------
@@ -84,8 +100,8 @@ body {
 }
 
 ::selection {
-  background-color: var(--color-primary);
-  color: var(--color-bg-pure);
+  background-color: var(--color-bosque);
+  color: var(--color-marfil);
 }
 
 img {
@@ -112,9 +128,8 @@ button {
   cursor: pointer;
 }
 
-/* Foco accesible */
 :focus-visible {
-  outline: 2px solid var(--color-primary);
+  outline: 2px solid var(--color-bosque);
   outline-offset: 4px;
 }
 
@@ -122,8 +137,8 @@ button {
   position: absolute;
   top: -100px;
   left: 1rem;
-  background: var(--color-primary);
-  color: #fff;
+  background: var(--color-bosque);
+  color: var(--color-marfil);
   padding: 0.75rem 1.5rem;
   z-index: 10000;
   transition: top 0.2s ease;
@@ -135,7 +150,7 @@ button {
 }
 
 /* --------------------------------------------------------------------------
-   LAYOUT UTILS
+   LAYOUT UTILS & RECURSOS GRÁFICOS DEL MANUAL
    -------------------------------------------------------------------------- */
 .container {
   width: 90%;
@@ -156,8 +171,73 @@ button {
   position: relative;
 }
 
+/* Iconos y Líneas de Camino del Manual */
+.brand-path-icon {
+  width: 72px;
+  height: 20px;
+  color: var(--color-bosque);
+  margin-bottom: var(--space-xs);
+}
+
+.brand-path-icon.center {
+  margin-inline: auto;
+}
+
+.brand-path-icon.sm {
+  width: 48px;
+  margin-inline: auto;
+  margin-bottom: 0.75rem;
+}
+
+.brand-path-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* Microcopy / Etiquetas Manrope Mono */
+.mono-label {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--color-text-light);
+  font-weight: 700;
+  margin-bottom: var(--space-xs);
+}
+
+.mono-tag {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-bosque);
+  font-weight: 700;
+}
+
+.tag-terracota {
+  color: var(--color-terracota);
+}
+
+.tag-salvia {
+  color: var(--color-bosque);
+  background-color: var(--color-bg-salvia-soft);
+  padding: 0.25rem 0.65rem;
+  border-radius: 4px;
+}
+
+.mono-number {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+  font-size: var(--step-2);
+  color: var(--color-bosque);
+  font-weight: 700;
+  line-height: 1;
+}
+
 /* --------------------------------------------------------------------------
-   HEADER & NAVEGACIÓN (MINIMAL EDITORIAL)
+   HEADER & NAVEGACIÓN
    -------------------------------------------------------------------------- */
 .site-header {
   position: fixed;
@@ -165,12 +245,12 @@ button {
   left: 0;
   width: 100%;
   z-index: 900;
-  padding-block: 1.25rem;
-  background: rgba(245, 242, 235, 0.92);
+  padding-block: 1.15rem;
+  background: rgba(244, 240, 231, 0.93);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--color-border);
-  transition: transform 0.4s var(--ease-editorial), background-color 0.3s ease;
+  transition: transform 0.4s var(--ease-editorial);
 }
 
 .site-header.header-hidden {
@@ -192,19 +272,20 @@ button {
   text-decoration: none;
 }
 
-.brand-title {
+.brand-name {
   font-family: var(--font-serif);
-  font-size: var(--step-2);
-  font-weight: 700;
-  color: var(--color-primary);
-  letter-spacing: -0.02em;
-  line-height: 1;
+  font-size: var(--step-1);
+  font-weight: 600;
+  color: var(--color-bosque);
+  letter-spacing: 0.08em;
+  line-height: 1.1;
 }
 
 .brand-sub {
-  font-size: 0.75rem;
-  font-weight: 500;
-  letter-spacing: 0.12em;
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--color-text-muted);
   margin-top: 2px;
@@ -232,7 +313,7 @@ button {
   left: 0;
   width: 0;
   height: 1.5px;
-  background-color: var(--color-primary);
+  background-color: var(--color-bosque);
   transition: width 0.3s var(--ease-editorial);
 }
 
@@ -245,20 +326,20 @@ button {
   display: none;
   flex-direction: column;
   justify-content: space-between;
-  width: 32px;
-  height: 20px;
+  width: 30px;
+  height: 18px;
   padding: 0;
 }
 
 .toggle-bar {
   width: 100%;
   height: 2px;
-  background-color: var(--color-primary);
+  background-color: var(--color-bosque);
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 /* --------------------------------------------------------------------------
-   BOTONES & ACCIONES
+   BOTONES
    -------------------------------------------------------------------------- */
 .btn {
   display: inline-flex;
@@ -276,39 +357,52 @@ button {
 }
 
 .btn-primary {
-  background-color: var(--color-primary);
-  color: #ffffff;
-  border: 1.5px solid var(--color-primary);
+  background-color: var(--color-bosque);
+  color: var(--color-marfil);
+  border: 1.5px solid var(--color-bosque);
 }
 
 .btn-primary:hover {
-  background-color: var(--color-primary-dark);
-  border-color: var(--color-primary-dark);
+  background-color: #1f3730;
+  border-color: #1f3730;
   transform: translateY(-2px);
-  box-shadow: 0 10px 25px rgba(46, 74, 53, 0.18);
+  box-shadow: 0 10px 25px rgba(41, 72, 63, 0.2);
+}
+
+.btn-terracota {
+  background-color: var(--color-terracota);
+  color: #ffffff;
+  border: 1.5px solid var(--color-terracota);
+}
+
+.btn-terracota:hover {
+  background-color: #a05a48;
+  border-color: #a05a48;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(183, 111, 92, 0.22);
 }
 
 .btn-ghost {
   background-color: transparent;
-  color: var(--color-primary);
-  border: 1.5px solid var(--color-primary);
+  color: var(--color-bosque);
+  border: 1.5px solid var(--color-bosque);
 }
 
 .btn-ghost:hover {
-  background-color: rgba(46, 74, 53, 0.06);
+  background-color: rgba(41, 72, 63, 0.06);
   transform: translateY(-2px);
 }
 
 .btn-outline {
   background-color: transparent;
-  color: var(--color-primary);
-  border: 1.5px solid var(--color-primary);
+  color: var(--color-bosque);
+  border: 1.5px solid var(--color-bosque);
   width: 100%;
 }
 
 .btn-outline:hover {
-  background-color: var(--color-primary);
-  color: #ffffff;
+  background-color: var(--color-bosque);
+  color: var(--color-marfil);
 }
 
 .btn-large {
@@ -321,7 +415,7 @@ button {
 }
 
 /* --------------------------------------------------------------------------
-   ACTO 1: HERO SECUENCIAL
+   ACTO 1: HERO
    -------------------------------------------------------------------------- */
 .section-hero {
   min-height: 100vh;
@@ -329,7 +423,7 @@ button {
   align-items: center;
   padding-top: calc(var(--space-2xl) + 2rem);
   padding-bottom: var(--space-xl);
-  background: var(--color-bg-pure);
+  background: var(--color-marfil);
 }
 
 .hero-grid {
@@ -339,30 +433,30 @@ button {
   align-items: center;
 }
 
-.eyebrow {
-  display: inline-block;
-  font-size: var(--step--1);
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--color-accent-terracotta);
-  font-weight: 700;
+.brand-eyebrow {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
   margin-bottom: var(--space-s);
+}
+
+.brand-eyebrow .mono-tag {
+  color: var(--color-terracota);
 }
 
 .hero-title {
   font-family: var(--font-serif);
   font-size: var(--step-4);
-  font-weight: 700;
-  line-height: 1.12;
-  color: var(--color-primary);
-  letter-spacing: -0.02em;
+  font-weight: 500;
+  line-height: 1.14;
+  color: var(--color-bosque);
+  letter-spacing: -0.015em;
   margin-bottom: var(--space-m);
 }
 
 .hero-title em {
   font-style: italic;
   font-weight: 400;
-  display: block;
 }
 
 .hero-lead {
@@ -373,7 +467,7 @@ button {
 }
 
 .hero-lead strong {
-  color: var(--color-text-main);
+  color: var(--color-carbon);
   font-weight: 700;
 }
 
@@ -384,7 +478,8 @@ button {
   color: var(--color-text-muted);
   margin-bottom: var(--space-l);
   padding-left: 1.25rem;
-  border-left: 2px solid var(--color-primary);
+  border-left: 2px solid var(--color-salvia);
+  font-style: italic;
 }
 
 .hero-actions {
@@ -399,9 +494,9 @@ button {
 
 .image-frame {
   position: relative;
-  border-radius: 12px;
+  border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 20px 45px rgba(37, 42, 39, 0.08);
 }
 
 .image-frame img {
@@ -412,47 +507,40 @@ button {
 }
 
 .image-frame:hover img {
-  transform: scale(1.03);
+  transform: scale(1.025);
 }
 
-.frame-caption {
+.frame-tag-mono {
   position: absolute;
   bottom: 1rem;
   left: 1rem;
   right: 1rem;
-  background: rgba(245, 242, 235, 0.85);
+  background: rgba(244, 240, 231, 0.92);
   backdrop-filter: blur(8px);
-  padding: 0.5rem 1rem;
-  border-radius: 6px;
-  font-size: 0.75rem;
-  letter-spacing: 0.05em;
-  color: var(--color-text-main);
+  padding: 0.6rem 1rem;
+  border-radius: 4px;
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.14em;
+  color: var(--color-bosque);
   text-align: center;
+  font-weight: 600;
 }
 
 /* --------------------------------------------------------------------------
-   ACTO 2: DEFINICIÓN EDITORIAL
+   ACTO 2: CONCEPTO CAMINAR(SE)
    -------------------------------------------------------------------------- */
 .section-definition {
   background-color: var(--color-bg-base);
   padding-block: var(--space-2xl);
-}
-
-.section-label {
-  display: block;
-  font-size: var(--step--1);
-  font-weight: 700;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: var(--color-text-light);
-  margin-bottom: var(--space-xs);
+  border-top: 1px solid var(--color-border);
 }
 
 .editorial-heading {
   font-family: var(--font-serif);
   font-size: var(--step-4);
-  font-weight: 700;
-  color: var(--color-primary);
+  font-weight: 500;
+  color: var(--color-bosque);
   line-height: 1.15;
   margin-bottom: var(--space-m);
 }
@@ -465,18 +553,39 @@ button {
 }
 
 .editorial-statement strong {
-  color: var(--color-primary);
-  font-weight: 700;
+  color: var(--color-bosque);
+  font-weight: 600;
+}
+
+.editorial-values-strip {
+  margin-top: var(--space-l);
+  font-family: var(--font-mono);
+  font-size: var(--step--1);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-text-light);
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.editorial-values-strip span {
+  color: var(--color-bosque);
+  font-weight: 600;
 }
 
 /* --------------------------------------------------------------------------
-   PAUSA VISUAL A PANTALLA COMPLETA
+   PAUSA VISUAL FOTOGRÁFICA
    -------------------------------------------------------------------------- */
 .section-photo-interlude {
   height: 65vh;
-  min-height: 420px;
+  min-height: 440px;
   position: relative;
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .interlude-img-wrapper {
@@ -494,8 +603,28 @@ button {
   object-position: center;
 }
 
+.interlude-overlay-text {
+  position: relative;
+  z-index: 2;
+  background: rgba(41, 72, 63, 0.78);
+  backdrop-filter: blur(10px);
+  padding: var(--space-m) var(--space-l);
+  border-radius: 8px;
+  max-width: 680px;
+  width: 85%;
+  text-align: center;
+}
+
+.interlude-overlay-text p {
+  font-family: var(--font-serif);
+  font-size: var(--step-2);
+  color: var(--color-marfil);
+  font-style: italic;
+  line-height: 1.4;
+}
+
 /* --------------------------------------------------------------------------
-   ACTO 3: PROCESOS QUE ACOMPAÑO (SEÑALES)
+   ACTO 3: SEÑALES DE TRÁNSITO
    -------------------------------------------------------------------------- */
 .section-signals {
   background-color: var(--color-bg-pure);
@@ -515,30 +644,23 @@ button {
   border-top: 1px solid var(--color-border);
 }
 
-.signal-number {
-  font-family: var(--font-serif);
-  font-size: var(--step-2);
-  font-style: italic;
-  color: var(--color-primary);
-  line-height: 1;
-}
-
 .signal-body p {
   font-size: var(--step-1);
-  line-height: 1.5;
+  line-height: 1.55;
   color: var(--color-text-muted);
 }
 
 .signal-body strong {
-  color: var(--color-text-main);
+  color: var(--color-carbon);
   font-weight: 700;
 }
 
 .quote-intermezzo {
   margin-top: var(--space-xl);
   padding: var(--space-m) var(--space-s);
-  background-color: var(--color-bg-base);
+  background-color: var(--color-marfil);
   border-radius: 8px;
+  border: 1px solid var(--color-border-subtle);
 }
 
 .quote-intermezzo blockquote {
@@ -546,7 +668,7 @@ button {
   font-size: var(--step-2);
   font-style: italic;
   line-height: 1.4;
-  color: var(--color-primary);
+  color: var(--color-bosque);
   max-width: var(--max-width-narrow);
   margin-inline: auto;
 }
@@ -555,7 +677,7 @@ button {
    ACTO 4: CÓMO ES EL ACOMPAÑAMIENTO
    -------------------------------------------------------------------------- */
 .section-methodology {
-  background-color: var(--color-bg-base);
+  background-color: var(--color-marfil);
 }
 
 .method-split {
@@ -583,19 +705,20 @@ button {
   content: '—';
   position: absolute;
   left: 0;
-  color: var(--color-primary);
+  color: var(--color-terracota);
   font-weight: 700;
 }
 
 .method-principles strong {
-  color: var(--color-text-main);
+  color: var(--color-carbon);
 }
 
 .core-truth-card {
   margin-top: var(--space-m);
   padding: var(--space-m);
-  border-left: 3px solid var(--color-primary);
-  background-color: rgba(46, 74, 53, 0.04);
+  border-left: 3px solid var(--color-bosque);
+  background-color: var(--color-bg-salvia-soft);
+  border-radius: 0 8px 8px 0;
 }
 
 .truth-text {
@@ -607,8 +730,8 @@ button {
 
 .truth-text span {
   display: block;
-  color: var(--color-primary);
-  font-weight: 700;
+  color: var(--color-bosque);
+  font-weight: 600;
   font-size: var(--step-3);
   font-style: italic;
   margin-top: 0.25rem;
@@ -617,26 +740,16 @@ button {
 .invitation-box {
   background-color: var(--color-bg-pure);
   padding: var(--space-l);
-  border-radius: 12px;
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+  box-shadow: 0 15px 40px rgba(41, 72, 63, 0.06);
   border: 1px solid var(--color-border);
-}
-
-.box-tag {
-  display: inline-block;
-  font-size: 0.75rem;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: var(--color-accent-terracotta);
-  font-weight: 700;
-  margin-bottom: 0.75rem;
 }
 
 .invitation-box h3 {
   font-family: var(--font-serif);
   font-size: var(--step-2);
-  color: var(--color-primary);
-  margin-bottom: 1rem;
+  color: var(--color-bosque);
+  margin-block: 0.5rem 1rem;
 }
 
 .invitation-box p {
@@ -660,9 +773,9 @@ button {
 }
 
 .image-frame-portrait {
-  border-radius: 12px;
+  border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 20px 45px rgba(37, 42, 39, 0.06);
   position: relative;
 }
 
@@ -684,7 +797,7 @@ button {
 }
 
 .bio-prose strong {
-  color: var(--color-text-main);
+  color: var(--color-carbon);
   font-weight: 600;
 }
 
@@ -696,7 +809,7 @@ button {
 .credentials-title {
   font-family: var(--font-serif);
   font-size: var(--step-2);
-  color: var(--color-primary);
+  color: var(--color-bosque);
   margin-bottom: 0.5rem;
 }
 
@@ -723,14 +836,14 @@ button {
   content: '•';
   position: absolute;
   left: 0.25rem;
-  color: var(--color-primary);
+  color: var(--color-terracota);
 }
 
 /* --------------------------------------------------------------------------
-   ACTO 6: TESTIMONIOS (TRÍPTICO EDITORIAL)
+   ACTO 6: TESTIMONIOS
    -------------------------------------------------------------------------- */
 .section-testimonials {
-  background-color: var(--color-bg-base);
+  background-color: var(--color-marfil);
 }
 
 .section-footnote {
@@ -760,8 +873,7 @@ button {
   font-family: var(--font-serif);
   font-size: 3.5rem;
   line-height: 1;
-  color: var(--color-primary);
-  opacity: 0.2;
+  color: var(--color-salvia);
   margin-bottom: -1rem;
 }
 
@@ -773,7 +885,7 @@ button {
 }
 
 /* --------------------------------------------------------------------------
-   ACTO 7: FAQ ACORDEÓN CINEMÁTICO
+   ACTO 7: FAQ ACORDEÓN
    -------------------------------------------------------------------------- */
 .section-faq {
   background-color: var(--color-bg-pure);
@@ -802,7 +914,7 @@ button {
 }
 
 .accordion-trigger:hover {
-  color: var(--color-primary);
+  color: var(--color-bosque);
 }
 
 .icon-plus {
@@ -817,7 +929,7 @@ button {
 .icon-plus::after {
   content: '';
   position: absolute;
-  background-color: var(--color-primary);
+  background-color: var(--color-bosque);
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -853,7 +965,7 @@ button {
    ACTO 8: RECURSOS GRATUITOS
    -------------------------------------------------------------------------- */
 .section-resources {
-  background-color: var(--color-bg-base);
+  background-color: var(--color-marfil);
 }
 
 .resources-subtitle {
@@ -873,31 +985,18 @@ button {
 .resource-card {
   background: var(--color-bg-pure);
   padding: var(--space-m);
-  border-radius: 12px;
+  border-radius: 8px;
   border: 1px solid var(--color-border);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
-.card-badge {
-  align-self: flex-start;
-  font-size: 0.75rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  font-weight: 700;
-  color: var(--color-accent-terracotta);
-  background: rgba(138, 90, 68, 0.08);
-  padding: 0.25rem 0.75rem;
-  border-radius: 4px;
-  margin-bottom: 1rem;
-}
-
 .resource-title {
   font-family: var(--font-serif);
   font-size: var(--step-2);
-  color: var(--color-primary);
-  margin-bottom: 1rem;
+  color: var(--color-bosque);
+  margin-block: 0.75rem 1rem;
   line-height: 1.25;
 }
 
@@ -918,7 +1017,7 @@ button {
 .resource-highlight {
   font-size: var(--step-0);
   font-weight: 600;
-  color: var(--color-primary);
+  color: var(--color-bosque);
   margin-bottom: 1.5rem;
 }
 
@@ -931,7 +1030,7 @@ button {
 }
 
 /* --------------------------------------------------------------------------
-   ACTO 9: CORRESPONDENCIA (NEWSLETTER EDITORIAL)
+   ACTO 9: CORRESPONDENCIA (NEWSLETTER)
    -------------------------------------------------------------------------- */
 .section-newsletter {
   background-color: var(--color-bg-alt);
@@ -939,17 +1038,17 @@ button {
 }
 
 .newsletter-editorial {
-  background: var(--color-bg-pure);
+  background: var(--color-marfil);
   padding: var(--space-xl) var(--space-l);
-  border-radius: 12px;
+  border-radius: 8px;
   border: 1px solid var(--color-border);
 }
 
 .newsletter-headline {
   font-family: var(--font-serif);
   font-size: var(--step-3);
-  font-weight: 700;
-  color: var(--color-primary);
+  font-weight: 600;
+  color: var(--color-bosque);
   line-height: 1.25;
   margin-bottom: var(--space-m);
 }
@@ -967,7 +1066,7 @@ button {
 
 .lead-drop {
   font-size: var(--step-2);
-  color: var(--color-text-main);
+  color: var(--color-carbon);
   margin-bottom: 1rem;
 }
 
@@ -975,19 +1074,19 @@ button {
   font-family: var(--font-serif);
   font-size: var(--step-2);
   line-height: 1.35;
-  color: var(--color-text-main);
+  color: var(--color-carbon);
   margin-bottom: 1.5rem;
 }
 
 .guilt-callout {
-  color: var(--color-accent-terracotta);
+  color: var(--color-terracota);
   font-weight: 700;
   margin-bottom: 1rem;
 }
 
 .internal-echoes {
   padding-left: 1.5rem;
-  border-left: 2px solid var(--color-accent-terracotta);
+  border-left: 2px solid var(--color-terracota);
   font-family: var(--font-serif);
   font-style: italic;
   font-size: var(--step-1);
@@ -997,7 +1096,7 @@ button {
 
 .conclusion-line {
   font-size: var(--step-2);
-  color: var(--color-text-main);
+  color: var(--color-carbon);
   margin-bottom: var(--space-l);
 }
 
@@ -1010,33 +1109,33 @@ button {
 .audience-manifesto h3 {
   font-family: var(--font-serif);
   font-size: var(--step-2);
-  color: var(--color-primary);
+  color: var(--color-bosque);
   margin-bottom: 1rem;
 }
 
 .roles-list {
   font-size: var(--step-1);
   font-weight: 600;
-  color: var(--color-text-main);
+  color: var(--color-carbon);
   margin-bottom: 1rem;
 }
 
 .audio-notice {
   margin-block: var(--space-m);
   padding: var(--space-m);
-  background: var(--color-bg-base);
-  border-radius: 8px;
+  background: var(--color-bg-salvia-soft);
+  border-radius: 6px;
 }
 
 .audio-notice h4 {
   font-size: var(--step-1);
-  color: var(--color-primary);
+  color: var(--color-bosque);
   margin-bottom: 0.5rem;
 }
 
 .clarity-punch {
   font-weight: 700;
-  color: var(--color-accent-terracotta);
+  color: var(--color-terracota);
   margin-top: 0.5rem;
 }
 
@@ -1047,12 +1146,12 @@ button {
 .letters-routine h4 {
   font-family: var(--font-serif);
   font-size: var(--step-2);
-  color: var(--color-primary);
+  color: var(--color-bosque);
   margin-bottom: 0.5rem;
 }
 
 .honest-declaration {
-  color: var(--color-accent-terracotta);
+  color: var(--color-terracota);
   font-weight: 700;
   margin-block: 1rem;
 }
@@ -1060,8 +1159,8 @@ button {
 .time-stamp {
   margin-top: 1.5rem;
   padding: 1.5rem;
-  border-left: 3px solid var(--color-primary);
-  background: rgba(46, 74, 53, 0.03);
+  border-left: 3px solid var(--color-bosque);
+  background: rgba(41, 72, 63, 0.04);
 }
 
 .rules-peace {
@@ -1081,22 +1180,18 @@ button {
 }
 
 /* --------------------------------------------------------------------------
-   ACTO 10: CODA & DESPEDIDA
+   ACTO 10: CODA
    -------------------------------------------------------------------------- */
 .section-coda {
   background-color: var(--color-bg-pure);
   padding-block: var(--space-2xl);
 }
 
-.coda-symbol {
-  margin-bottom: var(--space-m);
-}
-
 .coda-quote {
   font-family: var(--font-serif);
   font-size: var(--step-3);
-  font-weight: 600;
-  color: var(--color-primary);
+  font-weight: 500;
+  color: var(--color-bosque);
   line-height: 1.3;
   margin-bottom: 1.5rem;
 }
@@ -1118,7 +1213,7 @@ button {
    FOOTER
    -------------------------------------------------------------------------- */
 .site-footer {
-  background-color: var(--color-bg-base);
+  background-color: var(--color-marfil);
   border-top: 1px solid var(--color-border);
   padding-block: var(--space-m);
   font-size: var(--step--1);
@@ -1138,13 +1233,16 @@ button {
 }
 
 .footer-title {
-  font-family: var(--font-serif);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.14em;
   font-weight: 700;
-  color: var(--color-primary);
+  color: var(--color-bosque);
 }
 
 .footer-sub {
   color: var(--color-text-light);
+  font-size: 0.8125rem;
 }
 
 .footer-links {
@@ -1157,11 +1255,11 @@ button {
 }
 
 /* --------------------------------------------------------------------------
-   MICROINTERACCIONES Y REVELACIONES EDITORIALES
+   MICROINTERACCIONES Y REVELACIONES
    -------------------------------------------------------------------------- */
 [data-reveal] {
   opacity: 0;
-  transform: translateY(24px);
+  transform: translateY(22px);
   transition: opacity 0.8s var(--ease-editorial), transform 0.8s var(--ease-editorial);
   will-change: opacity, transform;
 }
@@ -1209,7 +1307,6 @@ button {
     grid-template-columns: 1fr;
   }
 
-  /* Menú Móvil Desplegable */
   .menu-toggle {
     display: flex;
   }
@@ -1221,9 +1318,9 @@ button {
     width: 85%;
     max-width: 380px;
     height: 100vh;
-    background-color: var(--color-bg-base);
+    background-color: var(--color-marfil);
     padding: var(--space-xl) var(--space-m);
-    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.1);
+    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.08);
     transform: translateX(100%);
     transition: transform 0.4s var(--ease-editorial);
     overflow-y: auto;
@@ -1244,11 +1341,11 @@ button {
   }
 
   .menu-toggle.is-active .toggle-bar:nth-child(1) {
-    transform: translateY(9px) rotate(45deg);
+    transform: translateY(8px) rotate(45deg);
   }
 
   .menu-toggle.is-active .toggle-bar:nth-child(2) {
-    transform: translateY(-9px) rotate(-45deg);
+    transform: translateY(-8px) rotate(-45deg);
   }
 }
 
@@ -1271,7 +1368,6 @@ button {
   }
 }
 
-/* Preferencias de accesibilidad de movimiento */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: 0.01ms !important;
