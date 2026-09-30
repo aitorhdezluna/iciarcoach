@@ -1,0 +1,1287 @@
+/* ==========================================================================
+   CAMINAR(SE) — DESIGN SYSTEM & EDITORIAL STYLING
+   Paleta: Forest Green (#2E4A35), Warm Sand (#F5F2EB), Soft White (#FFFFFF), 
+   Charcoal (#2B2927), Muted Earth (#6E6A64), Terra Cotta (#8A5A44)
+   ========================================================================== */
+
+:root {
+  /* Paleta cromática */
+  --color-bg-base: #f5f2eb;
+  --color-bg-pure: #ffffff;
+  --color-bg-alt: #ece8de;
+  --color-bg-card: #f9f7f2;
+  
+  --color-primary: #2e4a35;
+  --color-primary-light: #3d6146;
+  --color-primary-dark: #1f3324;
+  
+  --color-text-main: #2b2927;
+  --color-text-muted: #6e6a64;
+  --color-text-light: #8e8a83;
+  --color-accent-terracotta: #8a5a44;
+
+  --color-border: rgba(46, 74, 53, 0.12);
+  --color-border-subtle: rgba(110, 106, 100, 0.15);
+
+  /* Tipografía */
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-sans: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  /* Escala tipográfica fluida */
+  --step--1: clamp(0.8125rem, 0.78rem + 0.15vw, 0.9375rem);
+  --step-0: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
+  --step-1: clamp(1.15rem, 1.05rem + 0.5vw, 1.35rem);
+  --step-2: clamp(1.4rem, 1.25rem + 0.8vw, 1.75rem);
+  --step-3: clamp(1.75rem, 1.5rem + 1.2vw, 2.35rem);
+  --step-4: clamp(2.2rem, 1.8rem + 1.8vw, 3.2rem);
+  --step-5: clamp(2.8rem, 2.2rem + 2.8vw, 4.5rem);
+
+  /* Espaciado */
+  --space-2xs: clamp(0.5rem, 0.45rem + 0.25vw, 0.75rem);
+  --space-xs: clamp(0.75rem, 0.7rem + 0.3vw, 1rem);
+  --space-s: clamp(1rem, 0.9rem + 0.5vw, 1.5rem);
+  --space-m: clamp(1.5rem, 1.3rem + 1vw, 2.5rem);
+  --space-l: clamp(2.5rem, 2rem + 2vw, 4.5rem);
+  --space-xl: clamp(4rem, 3rem + 4vw, 7.5rem);
+  --space-2xl: clamp(5.5rem, 4rem + 6vw, 11rem);
+
+  /* Contenedores */
+  --max-width-site: 1320px;
+  --max-width-narrow: 820px;
+  --max-width-reading: 680px;
+
+  /* Transiciones */
+  --ease-editorial: cubic-bezier(0.25, 1, 0.5, 1);
+  --transition-fast: 0.25s var(--ease-editorial);
+  --transition-slow: 0.8s var(--ease-editorial);
+}
+
+/* --------------------------------------------------------------------------
+   RESET & FUNDAMENTALES
+   -------------------------------------------------------------------------- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 100%;
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-sans);
+  font-size: var(--step-0);
+  line-height: 1.68;
+  color: var(--color-text-main);
+  background-color: var(--color-bg-base);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+::selection {
+  background-color: var(--color-primary);
+  color: var(--color-bg-pure);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  transition: color var(--transition-fast), opacity var(--transition-fast);
+}
+
+ul, ol {
+  list-style: none;
+}
+
+button {
+  font: inherit;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Foco accesible */
+:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 4px;
+}
+
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 1rem;
+  background: var(--color-primary);
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  z-index: 10000;
+  transition: top 0.2s ease;
+  font-weight: 600;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
+/* --------------------------------------------------------------------------
+   LAYOUT UTILS
+   -------------------------------------------------------------------------- */
+.container {
+  width: 90%;
+  max-width: var(--max-width-site);
+  margin-inline: auto;
+}
+
+.container-narrow {
+  max-width: var(--max-width-narrow);
+}
+
+.text-center {
+  text-align: center;
+}
+
+.section {
+  padding-block: var(--space-xl);
+  position: relative;
+}
+
+/* --------------------------------------------------------------------------
+   HEADER & NAVEGACIÓN (MINIMAL EDITORIAL)
+   -------------------------------------------------------------------------- */
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 900;
+  padding-block: 1.25rem;
+  background: rgba(245, 242, 235, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--color-border);
+  transition: transform 0.4s var(--ease-editorial), background-color 0.3s ease;
+}
+
+.site-header.header-hidden {
+  transform: translateY(-100%);
+}
+
+.header-inner {
+  width: 90%;
+  max-width: var(--max-width-site);
+  margin-inline: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand-monogram {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+}
+
+.brand-title {
+  font-family: var(--font-serif);
+  font-size: var(--step-2);
+  font-weight: 700;
+  color: var(--color-primary);
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+
+.brand-sub {
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  margin-top: 2px;
+}
+
+.primary-nav .nav-list {
+  display: flex;
+  gap: var(--space-s);
+  align-items: center;
+}
+
+.nav-link {
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--color-text-main);
+  padding: 0.5rem 0.25rem;
+  position: relative;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1.5px;
+  background-color: var(--color-primary);
+  transition: width 0.3s var(--ease-editorial);
+}
+
+.nav-link:hover::after,
+.nav-link:focus::after {
+  width: 100%;
+}
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 32px;
+  height: 20px;
+  padding: 0;
+}
+
+.toggle-bar {
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-primary);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* --------------------------------------------------------------------------
+   BOTONES & ACCIONES
+   -------------------------------------------------------------------------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.95rem 2rem;
+  border-radius: 9999px;
+  font-size: var(--step--1);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  transition: all var(--transition-fast);
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.btn-primary {
+  background-color: var(--color-primary);
+  color: #ffffff;
+  border: 1.5px solid var(--color-primary);
+}
+
+.btn-primary:hover {
+  background-color: var(--color-primary-dark);
+  border-color: var(--color-primary-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(46, 74, 53, 0.18);
+}
+
+.btn-ghost {
+  background-color: transparent;
+  color: var(--color-primary);
+  border: 1.5px solid var(--color-primary);
+}
+
+.btn-ghost:hover {
+  background-color: rgba(46, 74, 53, 0.06);
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: var(--color-primary);
+  border: 1.5px solid var(--color-primary);
+  width: 100%;
+}
+
+.btn-outline:hover {
+  background-color: var(--color-primary);
+  color: #ffffff;
+}
+
+.btn-large {
+  padding: 1.25rem 3rem;
+  font-size: var(--step-0);
+}
+
+.full-width {
+  width: 100%;
+}
+
+/* --------------------------------------------------------------------------
+   ACTO 1: HERO SECUENCIAL
+   -------------------------------------------------------------------------- */
+.section-hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding-top: calc(var(--space-2xl) + 2rem);
+  padding-bottom: var(--space-xl);
+  background: var(--color-bg-pure);
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: var(--space-l);
+  align-items: center;
+}
+
+.eyebrow {
+  display: inline-block;
+  font-size: var(--step--1);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-accent-terracotta);
+  font-weight: 700;
+  margin-bottom: var(--space-s);
+}
+
+.hero-title {
+  font-family: var(--font-serif);
+  font-size: var(--step-4);
+  font-weight: 700;
+  line-height: 1.12;
+  color: var(--color-primary);
+  letter-spacing: -0.02em;
+  margin-bottom: var(--space-m);
+}
+
+.hero-title em {
+  font-style: italic;
+  font-weight: 400;
+  display: block;
+}
+
+.hero-lead {
+  font-size: var(--step-1);
+  color: var(--color-text-muted);
+  line-height: 1.6;
+  margin-bottom: var(--space-m);
+}
+
+.hero-lead strong {
+  color: var(--color-text-main);
+  font-weight: 700;
+}
+
+.hero-quote {
+  font-family: var(--font-serif);
+  font-size: var(--step-2);
+  line-height: 1.4;
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-l);
+  padding-left: 1.25rem;
+  border-left: 2px solid var(--color-primary);
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.hero-visual {
+  position: relative;
+}
+
+.image-frame {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.08);
+}
+
+.image-frame img {
+  width: 100%;
+  aspect-ratio: 3/4;
+  object-fit: cover;
+  transition: transform 1.2s var(--ease-editorial);
+}
+
+.image-frame:hover img {
+  transform: scale(1.03);
+}
+
+.frame-caption {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  right: 1rem;
+  background: rgba(245, 242, 235, 0.85);
+  backdrop-filter: blur(8px);
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  color: var(--color-text-main);
+  text-align: center;
+}
+
+/* --------------------------------------------------------------------------
+   ACTO 2: DEFINICIÓN EDITORIAL
+   -------------------------------------------------------------------------- */
+.section-definition {
+  background-color: var(--color-bg-base);
+  padding-block: var(--space-2xl);
+}
+
+.section-label {
+  display: block;
+  font-size: var(--step--1);
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-text-light);
+  margin-bottom: var(--space-xs);
+}
+
+.editorial-heading {
+  font-family: var(--font-serif);
+  font-size: var(--step-4);
+  font-weight: 700;
+  color: var(--color-primary);
+  line-height: 1.15;
+  margin-bottom: var(--space-m);
+}
+
+.editorial-statement p {
+  font-family: var(--font-serif);
+  font-size: var(--step-3);
+  line-height: 1.45;
+  color: var(--color-text-muted);
+}
+
+.editorial-statement strong {
+  color: var(--color-primary);
+  font-weight: 700;
+}
+
+/* --------------------------------------------------------------------------
+   PAUSA VISUAL A PANTALLA COMPLETA
+   -------------------------------------------------------------------------- */
+.section-photo-interlude {
+  height: 65vh;
+  min-height: 420px;
+  position: relative;
+  overflow: hidden;
+}
+
+.interlude-img-wrapper {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 120%;
+  top: -10%;
+}
+
+.interlude-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* --------------------------------------------------------------------------
+   ACTO 3: PROCESOS QUE ACOMPAÑO (SEÑALES)
+   -------------------------------------------------------------------------- */
+.section-signals {
+  background-color: var(--color-bg-pure);
+}
+
+.signals-editorial-flow {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-m) var(--space-l);
+  margin-block: var(--space-l);
+}
+
+.signal-item {
+  display: flex;
+  gap: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--color-border);
+}
+
+.signal-number {
+  font-family: var(--font-serif);
+  font-size: var(--step-2);
+  font-style: italic;
+  color: var(--color-primary);
+  line-height: 1;
+}
+
+.signal-body p {
+  font-size: var(--step-1);
+  line-height: 1.5;
+  color: var(--color-text-muted);
+}
+
+.signal-body strong {
+  color: var(--color-text-main);
+  font-weight: 700;
+}
+
+.quote-intermezzo {
+  margin-top: var(--space-xl);
+  padding: var(--space-m) var(--space-s);
+  background-color: var(--color-bg-base);
+  border-radius: 8px;
+}
+
+.quote-intermezzo blockquote {
+  font-family: var(--font-serif);
+  font-size: var(--step-2);
+  font-style: italic;
+  line-height: 1.4;
+  color: var(--color-primary);
+  max-width: var(--max-width-narrow);
+  margin-inline: auto;
+}
+
+/* --------------------------------------------------------------------------
+   ACTO 4: CÓMO ES EL ACOMPAÑAMIENTO
+   -------------------------------------------------------------------------- */
+.section-methodology {
+  background-color: var(--color-bg-base);
+}
+
+.method-split {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: var(--space-xl);
+  align-items: center;
+}
+
+.method-principles {
+  margin-block: var(--space-m);
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.method-principles li {
+  position: relative;
+  padding-left: 2rem;
+  font-size: var(--step-1);
+  color: var(--color-text-muted);
+}
+
+.method-principles li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: var(--color-primary);
+  font-weight: 700;
+}
+
+.method-principles strong {
+  color: var(--color-text-main);
+}
+
+.core-truth-card {
+  margin-top: var(--space-m);
+  padding: var(--space-m);
+  border-left: 3px solid var(--color-primary);
+  background-color: rgba(46, 74, 53, 0.04);
+}
+
+.truth-text {
+  font-family: var(--font-serif);
+  font-size: var(--step-2);
+  color: var(--color-text-muted);
+  line-height: 1.35;
+}
+
+.truth-text span {
+  display: block;
+  color: var(--color-primary);
+  font-weight: 700;
+  font-size: var(--step-3);
+  font-style: italic;
+  margin-top: 0.25rem;
+}
+
+.invitation-box {
+  background-color: var(--color-bg-pure);
+  padding: var(--space-l);
+  border-radius: 12px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.05);
+  border: 1px solid var(--color-border);
+}
+
+.box-tag {
+  display: inline-block;
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-accent-terracotta);
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+.invitation-box h3 {
+  font-family: var(--font-serif);
+  font-size: var(--step-2);
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+}
+
+.invitation-box p {
+  color: var(--color-text-muted);
+  margin-bottom: 1.5rem;
+  font-size: var(--step-0);
+}
+
+/* --------------------------------------------------------------------------
+   ACTO 5: SOBRE MÍ & FORMACIÓN
+   -------------------------------------------------------------------------- */
+.section-bio {
+  background-color: var(--color-bg-pure);
+}
+
+.bio-layout {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: var(--space-xl);
+  align-items: flex-start;
+}
+
+.image-frame-portrait {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.06);
+  position: relative;
+}
+
+.image-frame-portrait img {
+  width: 100%;
+  aspect-ratio: 4/5;
+  object-fit: cover;
+}
+
+.bio-prose {
+  margin-bottom: var(--space-l);
+}
+
+.bio-prose p {
+  font-size: var(--step-1);
+  color: var(--color-text-muted);
+  line-height: 1.7;
+  margin-bottom: 1.25rem;
+}
+
+.bio-prose strong {
+  color: var(--color-text-main);
+  font-weight: 600;
+}
+
+.credentials-block {
+  padding-top: var(--space-m);
+  border-top: 1px solid var(--color-border);
+}
+
+.credentials-title {
+  font-family: var(--font-serif);
+  font-size: var(--step-2);
+  color: var(--color-primary);
+  margin-bottom: 0.5rem;
+}
+
+.credentials-sub {
+  font-size: var(--step-0);
+  color: var(--color-text-light);
+  margin-bottom: 1.25rem;
+}
+
+.credentials-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.credentials-list li {
+  font-size: var(--step-0);
+  color: var(--color-text-main);
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.credentials-list li::before {
+  content: '•';
+  position: absolute;
+  left: 0.25rem;
+  color: var(--color-primary);
+}
+
+/* --------------------------------------------------------------------------
+   ACTO 6: TESTIMONIOS (TRÍPTICO EDITORIAL)
+   -------------------------------------------------------------------------- */
+.section-testimonials {
+  background-color: var(--color-bg-base);
+}
+
+.section-footnote {
+  color: var(--color-text-light);
+  font-size: var(--step--1);
+  margin-top: 0.5rem;
+}
+
+.testimonials-triptych {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-m);
+  margin-top: var(--space-l);
+}
+
+.testimony-card {
+  background: var(--color-bg-pure);
+  padding: var(--space-m);
+  border-radius: 8px;
+  border: 1px solid var(--color-border);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.quote-mark {
+  font-family: var(--font-serif);
+  font-size: 3.5rem;
+  line-height: 1;
+  color: var(--color-primary);
+  opacity: 0.2;
+  margin-bottom: -1rem;
+}
+
+.testimony-card p {
+  font-family: var(--font-serif);
+  font-size: var(--step-1);
+  line-height: 1.55;
+  color: var(--color-text-muted);
+}
+
+/* --------------------------------------------------------------------------
+   ACTO 7: FAQ ACORDEÓN CINEMÁTICO
+   -------------------------------------------------------------------------- */
+.section-faq {
+  background-color: var(--color-bg-pure);
+}
+
+.accordion {
+  margin-top: var(--space-l);
+  border-top: 1px solid var(--color-border);
+}
+
+.accordion-item {
+  border-bottom: 1px solid var(--color-border);
+}
+
+.accordion-trigger {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-block: 1.75rem;
+  text-align: left;
+  font-family: var(--font-serif);
+  font-size: var(--step-2);
+  color: var(--color-text-main);
+  transition: color var(--transition-fast);
+}
+
+.accordion-trigger:hover {
+  color: var(--color-primary);
+}
+
+.icon-plus {
+  position: relative;
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  margin-left: 1rem;
+}
+
+.icon-plus::before,
+.icon-plus::after {
+  content: '';
+  position: absolute;
+  background-color: var(--color-primary);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: transform 0.3s ease;
+}
+
+.icon-plus::before {
+  width: 100%;
+  height: 1.5px;
+}
+
+.icon-plus::after {
+  width: 1.5px;
+  height: 100%;
+}
+
+.accordion-trigger[aria-expanded="true"] .icon-plus::after {
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.accordion-panel {
+  padding-bottom: 1.75rem;
+}
+
+.panel-inner p {
+  font-size: var(--step-0);
+  line-height: 1.7;
+  color: var(--color-text-muted);
+  max-width: var(--max-width-reading);
+}
+
+/* --------------------------------------------------------------------------
+   ACTO 8: RECURSOS GRATUITOS
+   -------------------------------------------------------------------------- */
+.section-resources {
+  background-color: var(--color-bg-base);
+}
+
+.resources-subtitle {
+  font-family: var(--font-serif);
+  font-size: var(--step-2);
+  font-style: italic;
+  color: var(--color-text-muted);
+}
+
+.resources-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-m);
+  margin-top: var(--space-l);
+}
+
+.resource-card {
+  background: var(--color-bg-pure);
+  padding: var(--space-m);
+  border-radius: 12px;
+  border: 1px solid var(--color-border);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-badge {
+  align-self: flex-start;
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--color-accent-terracotta);
+  background: rgba(138, 90, 68, 0.08);
+  padding: 0.25rem 0.75rem;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
+
+.resource-title {
+  font-family: var(--font-serif);
+  font-size: var(--step-2);
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+  line-height: 1.25;
+}
+
+.resource-desc {
+  font-size: var(--step-0);
+  color: var(--color-text-muted);
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.resource-tip {
+  font-size: var(--step--1);
+  color: var(--color-text-light);
+  font-style: italic;
+  margin-bottom: 1.5rem;
+}
+
+.resource-highlight {
+  font-size: var(--step-0);
+  font-weight: 600;
+  color: var(--color-primary);
+  margin-bottom: 1.5rem;
+}
+
+.resource-legal {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--color-text-light);
+  line-height: 1.4;
+  margin-top: 0.75rem;
+}
+
+/* --------------------------------------------------------------------------
+   ACTO 9: CORRESPONDENCIA (NEWSLETTER EDITORIAL)
+   -------------------------------------------------------------------------- */
+.section-newsletter {
+  background-color: var(--color-bg-alt);
+  padding-block: var(--space-2xl);
+}
+
+.newsletter-editorial {
+  background: var(--color-bg-pure);
+  padding: var(--space-xl) var(--space-l);
+  border-radius: 12px;
+  border: 1px solid var(--color-border);
+}
+
+.newsletter-headline {
+  font-family: var(--font-serif);
+  font-size: var(--step-3);
+  font-weight: 700;
+  color: var(--color-primary);
+  line-height: 1.25;
+  margin-bottom: var(--space-m);
+}
+
+.newsletter-headline em {
+  font-style: italic;
+  font-weight: 400;
+}
+
+.newsletter-story {
+  font-size: var(--step-1);
+  color: var(--color-text-muted);
+  line-height: 1.65;
+}
+
+.lead-drop {
+  font-size: var(--step-2);
+  color: var(--color-text-main);
+  margin-bottom: 1rem;
+}
+
+.emphasis-staccato {
+  font-family: var(--font-serif);
+  font-size: var(--step-2);
+  line-height: 1.35;
+  color: var(--color-text-main);
+  margin-bottom: 1.5rem;
+}
+
+.guilt-callout {
+  color: var(--color-accent-terracotta);
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.internal-echoes {
+  padding-left: 1.5rem;
+  border-left: 2px solid var(--color-accent-terracotta);
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: var(--step-1);
+  margin-bottom: 1.5rem;
+  color: var(--color-text-muted);
+}
+
+.conclusion-line {
+  font-size: var(--step-2);
+  color: var(--color-text-main);
+  margin-bottom: var(--space-l);
+}
+
+.audience-manifesto {
+  margin-block: var(--space-m);
+  padding-top: var(--space-m);
+  border-top: 1px solid var(--color-border);
+}
+
+.audience-manifesto h3 {
+  font-family: var(--font-serif);
+  font-size: var(--step-2);
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+}
+
+.roles-list {
+  font-size: var(--step-1);
+  font-weight: 600;
+  color: var(--color-text-main);
+  margin-bottom: 1rem;
+}
+
+.audio-notice {
+  margin-block: var(--space-m);
+  padding: var(--space-m);
+  background: var(--color-bg-base);
+  border-radius: 8px;
+}
+
+.audio-notice h4 {
+  font-size: var(--step-1);
+  color: var(--color-primary);
+  margin-bottom: 0.5rem;
+}
+
+.clarity-punch {
+  font-weight: 700;
+  color: var(--color-accent-terracotta);
+  margin-top: 0.5rem;
+}
+
+.letters-routine {
+  margin-top: var(--space-m);
+}
+
+.letters-routine h4 {
+  font-family: var(--font-serif);
+  font-size: var(--step-2);
+  color: var(--color-primary);
+  margin-bottom: 0.5rem;
+}
+
+.honest-declaration {
+  color: var(--color-accent-terracotta);
+  font-weight: 700;
+  margin-block: 1rem;
+}
+
+.time-stamp {
+  margin-top: 1.5rem;
+  padding: 1.5rem;
+  border-left: 3px solid var(--color-primary);
+  background: rgba(46, 74, 53, 0.03);
+}
+
+.rules-peace {
+  margin-top: 0.75rem;
+  font-style: italic;
+}
+
+.newsletter-cta-zone {
+  margin-top: var(--space-l);
+  text-align: center;
+}
+
+.unsub-note {
+  font-size: var(--step--1);
+  color: var(--color-text-light);
+  margin-top: 0.75rem;
+}
+
+/* --------------------------------------------------------------------------
+   ACTO 10: CODA & DESPEDIDA
+   -------------------------------------------------------------------------- */
+.section-coda {
+  background-color: var(--color-bg-pure);
+  padding-block: var(--space-2xl);
+}
+
+.coda-symbol {
+  margin-bottom: var(--space-m);
+}
+
+.coda-quote {
+  font-family: var(--font-serif);
+  font-size: var(--step-3);
+  font-weight: 600;
+  color: var(--color-primary);
+  line-height: 1.3;
+  margin-bottom: 1.5rem;
+}
+
+.coda-sub {
+  font-size: var(--step-1);
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-m);
+}
+
+.coda-actions {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+/* --------------------------------------------------------------------------
+   FOOTER
+   -------------------------------------------------------------------------- */
+.site-footer {
+  background-color: var(--color-bg-base);
+  border-top: 1px solid var(--color-border);
+  padding-block: var(--space-m);
+  font-size: var(--step--1);
+}
+
+.footer-layout {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-title {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.footer-sub {
+  color: var(--color-text-light);
+}
+
+.footer-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.footer-legal {
+  color: var(--color-text-light);
+}
+
+/* --------------------------------------------------------------------------
+   MICROINTERACCIONES Y REVELACIONES EDITORIALES
+   -------------------------------------------------------------------------- */
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.8s var(--ease-editorial), transform 0.8s var(--ease-editorial);
+  will-change: opacity, transform;
+}
+
+[data-reveal].is-revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* --------------------------------------------------------------------------
+   RESPONSIVE DESIGN (MOBILE-FIRST)
+   -------------------------------------------------------------------------- */
+@media (max-width: 992px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-m);
+  }
+
+  .hero-visual {
+    order: -1;
+    max-width: 480px;
+    margin-inline: auto;
+  }
+
+  .signals-editorial-flow {
+    grid-template-columns: 1fr;
+  }
+
+  .method-split {
+    grid-template-columns: 1fr;
+    gap: var(--space-l);
+  }
+
+  .bio-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .bio-visual {
+    max-width: 440px;
+    margin-inline: auto;
+  }
+
+  .testimonials-triptych,
+  .resources-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Menú Móvil Desplegable */
+  .menu-toggle {
+    display: flex;
+  }
+
+  .primary-nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 85%;
+    max-width: 380px;
+    height: 100vh;
+    background-color: var(--color-bg-base);
+    padding: var(--space-xl) var(--space-m);
+    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.1);
+    transform: translateX(100%);
+    transition: transform 0.4s var(--ease-editorial);
+    overflow-y: auto;
+  }
+
+  .primary-nav.is-open {
+    transform: translateX(0);
+  }
+
+  .primary-nav .nav-list {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+
+  .nav-link {
+    font-size: var(--step-1);
+  }
+
+  .menu-toggle.is-active .toggle-bar:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+  }
+
+  .menu-toggle.is-active .toggle-bar:nth-child(2) {
+    transform: translateY(-9px) rotate(-45deg);
+  }
+}
+
+@media (max-width: 640px) {
+  .hero-actions {
+    flex-direction: column;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+  }
+
+  .footer-layout {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .newsletter-editorial {
+    padding: var(--space-m) var(--space-s);
+  }
+}
+
+/* Preferencias de accesibilidad de movimiento */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  [data-reveal] {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
