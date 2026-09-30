@@ -5,273 +5,342 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>Caminar(se) — Icíar Alonso Coach | Acompañamiento Emocional</title>
   
-  <!-- SEO Meta Tags -->
-  <meta name="description" content="Acompañamiento emocional para transitar tus cambios. Un espacio íntimo y ético para acompañar el tránsito entre lo que ya no encaja y lo nuevo.">
+  <meta name="description" content="Acompañamiento emocional para transitar tus cambios. Un espacio íntimo y ético para acompañar el tránsito entre lo que ya no encaja y lo nuevo que aún no sabes cómo habitar.">
   <meta name="robots" content="index, follow">
   <meta name="author" content="Icíar Alonso">
   <link rel="canonical" href="https://iciarcoach.es/">
 
-  <!-- Open Graph / Facebook -->
+  <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://iciarcoach.es/">
   <meta property="og:title" content="Caminar(se) — Icíar Alonso Coach">
-  <meta property="og:description" content="Acompañamiento emocional para soltar vínculos que duelen y volver a ti con calma, claridad y fuerza interior.">
+  <meta property="og:description" content="Acompañamiento emocional para transitar tus cambios.">
   <meta property="og:image" content="images/a69b22463059eb84515640ce187c87d9.jpg">
 
-  <!-- Twitter Cards -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Caminar(se) — Icíar Alonso Coach">
-  <meta name="twitter:description" content="Acompañamiento emocional íntimo y ético en momentos de cambio interno profundo.">
-  <meta name="twitter:image" content="images/a69b22463059eb84515640ce187c87d9.jpg">
-
-  <!-- Favicon Oficial con color Bosque (#29483F) y Marfil (#F4F0E7) -->
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='46' fill='%2329483F'/><text y='58' x='50' text-anchor='middle' font-family='serif' font-size='38' fill='%23F4F0E7'>I</text></svg>">
-  <link rel="manifest" href="site.webmanifest">
   <meta name="theme-color" content="#F4F0E7">
 
-  <!-- Tipografías oficiales del Design System: Fraunces + Manrope -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..700,0..100;1,9..144,300..700,0..100&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..600,0..80;1,9..144,300..600,0..80&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
-  <a href="#contenido-principal" class="skip-link">Saltar al contenido principal</a>
+<body class="editorial-flow">
+  <a href="#main" class="skip-link">Saltar al contenido</a>
 
-  <!-- Header Editorial Sutil -->
-  <header class="site-header" id="site-header" role="banner">
-    <div class="header-inner">
-      <a href="#inicio" class="brand-monogram" aria-label="Ir al inicio de Caminar(se)">
-        <span class="brand-name">ICÍAR ALONSO</span>
-        <span class="brand-sub">COACH · CAMINAR(SE)</span>
+  <header class="masthead" id="masthead">
+    <div class="masthead-inner">
+      <a href="#inicio" class="brand-signature" aria-label="Ir al inicio de Caminar(se)">
+        <span class="brand-top">ICÍAR ALONSO</span>
+        <span class="brand-bottom">COACH · CAMINAR(SE)</span>
       </a>
-      
-      <button class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Abrir menú de navegación">
-        <span class="toggle-bar"></span>
-        <span class="toggle-bar"></span>
-      </button>
 
-      <nav class="primary-nav" id="primary-nav" aria-label="Navegación principal">
-        <ul class="nav-list">
-          <li><a href="#inicio" class="nav-link">Caminar(se)</a></li>
-          <li><a href="#proceso" class="nav-link">Proceso</a></li>
-          <li><a href="#inversion" class="nav-link">Inversión</a></li>
-          <li><a href="#quien-soy" class="nav-link">Quién Soy</a></li>
-          <li><a href="#testimonios" class="nav-link">Testimonios</a></li>
-          <li><a href="#faq" class="nav-link">FAQ</a></li>
-          <li><a href="#recursos" class="nav-link">Recursos Gratuitos</a></li>
+      <div class="masthead-center">
+        <span class="live-status"><span class="status-pulse"></span> Espacio íntimo & ético</span>
+      </div>
+
+      <nav class="masthead-nav" id="site-nav" aria-label="Navegación principal">
+        <ul class="nav-track">
+          <li><a href="#inicio" class="nav-anchor">Caminar(se)</a></li>
+          <li><a href="#proceso" class="nav-anchor">Proceso</a></li>
+          <li><a href="#inversion" class="nav-anchor">Inversión</a></li>
+          <li><a href="#quien-soy" class="nav-anchor">Quién Soy</a></li>
+          <li><a href="#testimonios" class="nav-anchor">Testimonios</a></li>
+          <li><a href="#faq" class="nav-anchor">FAQ</a></li>
+          <li><a href="#recursos" class="nav-anchor">Recursos Gratuitos</a></li>
+          <li><a href="cartas.html" class="nav-anchor nav-anchor-highlight">Cartas 09:47</a></li>
         </ul>
       </nav>
+
+      <button class="nav-trigger" id="nav-trigger" aria-expanded="false" aria-controls="site-nav" aria-label="Menú">
+        <span class="bar top"></span>
+        <span class="bar bottom"></span>
+      </button>
     </div>
   </header>
 
-  <main id="contenido-principal">
-    
-    <!-- ACTO 1: APERTURA (PORTADA DE MANUAL) -->
-    <section id="inicio" class="section section-hero" aria-label="Introducción">
-      <div class="container">
-        <div class="hero-grid">
-          <div class="hero-content">
-            <div class="brand-eyebrow" data-reveal>
-              <span class="mono-tag">ACOMPAÑAMIENTO EMOCIONAL</span>
-              <span class="mono-tag">PARA TRANSITAR TUS CAMBIOS</span>
-            </div>
-            
-            <h1 class="hero-title" data-reveal>
-              Cuando por fin empiezas a elegirte... <br>
-              <em>todo alrededor empieza a romperse.</em>
+  <main id="main">
+
+    <!-- 01. PORTADA EDITORIAL -->
+    <section id="inicio" class="cover-section" aria-label="Portada">
+      <div class="cover-bounds">
+        <div class="cover-meta-bar" data-reveal>
+          <span class="meta-capsule">VOL. 01 / ACOMPAÑAMIENTO EMOCIONAL</span>
+          <span class="meta-capsule">PARA TRANSITAR TUS CAMBIOS</span>
+          <span class="meta-capsule hide-mobile">MADRID · ONLINE</span>
+        </div>
+
+        <div class="cover-composition">
+          <div class="cover-text-col">
+            <h1 class="cover-headline" data-reveal>
+              Cuando por fin <br>
+              empiezas a elegirte... <br>
+              <span class="slant-italic">todo alrededor</span> <br>
+              empieza a romperse.
             </h1>
-            
-            <p class="hero-lead" data-reveal>
-              <strong>Caminar(se)</strong> es un espacio íntimo y ético para acompañar el tránsito entre lo que ya no encaja y lo nuevo que aún no sabes cómo habitar.
-            </p>
-            
-            <p class="hero-quote" data-reveal>
-              <em>Te acompaño en ese vértigo de perder certezas, relaciones… o partes de ti. No para repararte. Sino para sostenerte mientras eliges no dejarte atrás.</em>
-            </p>
-            
-            <div class="hero-actions" data-reveal>
-              <a href="https://wa.link/zugo5a" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-                Quiero dar el primer paso
+
+            <div class="cover-sub-stack" data-reveal>
+              <p class="manifesto-paragraph">
+                <strong>Caminar(se)</strong> es un espacio íntimo y ético para acompañar el tránsito entre lo que ya no encaja y lo nuevo que aún no sabes cómo habitar.
+              </p>
+              <div class="whisper-box">
+                <p>
+                  <em>Te acompaño en ese vértigo de perder certezas, relaciones… o partes de ti. No para repararte. Sino para sostenerte mientras eliges no dejarte atrás.</em>
+                </p>
+              </div>
+            </div>
+
+            <div class="cover-actions" data-reveal>
+              <a href="https://wa.link/zugo5a" target="_blank" rel="noopener noreferrer" class="btn-atelier solid">
+                <span>Quiero dar el primer paso</span>
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 13L13 1M13 1H3M13 1V11" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
               </a>
-              <a href="#proceso" class="btn btn-ghost">
-                Ver cómo funciona
+              <a href="#proceso" class="btn-atelier line">
+                <span>Ver cómo funciona</span>
               </a>
             </div>
           </div>
-          
-          <div class="hero-visual" data-reveal>
-            <div class="image-frame">
-              <img src="images/a69b22463059eb84515640ce187c87d9.jpg" alt="Icíar sobre un puente de madera en medio de un bosque verde" width="800" height="1067" loading="eager" fetchpriority="high">
-              <div class="frame-tag-mono">01 / PROCESO · LÍMITES · CAMBIO</div>
+
+          <div class="cover-gallery-col" data-reveal>
+            <div class="gallery-portrait-mount">
+              <div class="portrait-clip">
+                <img src="images/a69b22463059eb84515640ce187c87d9.jpg" alt="Icíar sobre un puente de madera en la naturaleza" width="800" height="1067" loading="eager" fetchpriority="high">
+              </div>
+
+              <div class="orbital-badge" aria-hidden="true">
+                <svg viewBox="0 0 140 140">
+                  <path id="circlePath" d="M 70, 70 m -50, 0 a 50,50 0 1,1 100,0 a 50,50 0 1,1 -100,0" fill="transparent"/>
+                  <text font-family="Manrope" font-size="9.5" font-weight="600" letter-spacing="0.18em" fill="#29483F">
+                    <textPath xlink:href="#circlePath">CAMINAR(SE) · ICÍAR ALONSO · </textPath>
+                  </text>
+                </svg>
+                <span class="badge-dot"></span>
+              </div>
+
+              <div class="portrait-footnote">
+                <span>01 / PRESENCIA</span>
+                <span>PUENTE DE MADERA EN EL BOSQUE</span>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ACTO 2: CONCEPTO CAMINAR(SE) -->
-    <section id="proceso" class="section section-definition" aria-label="Propuesta y Esencia">
-      <div class="container container-narrow text-center">
-        <div class="brand-path-icon" aria-hidden="true">
-          <svg viewBox="0 0 100 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M2 18C25 4 45 22 70 8C82 0 92 10 98 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
-          </svg>
+    <!-- 02. CONCEPTO (LÍNEA ELIMINADA, LIMPIO) -->
+    <section id="proceso" class="manifesto-section" aria-label="Concepto">
+      <div class="manifesto-bounds">
+        <div class="curator-index center" data-reveal>
+          <span class="spec-id">[ 01 · CONCEPTO ]</span>
+          <div class="spec-line"></div>
+          <span class="spec-legend">DEFINICIÓN DEL ESPACIO</span>
         </div>
-        <span class="mono-label" data-reveal>CONCEPTO</span>
-        <h2 class="editorial-heading" data-reveal>¿Qué es Caminar(se)?</h2>
-        <div class="editorial-statement" data-reveal>
-          <p>
-            Es un acompañamiento emocional pensado para personas que están atravesando un cambio interno profundo. No se trata de superar una ruptura ni de alcanzar una meta. Se trata de <strong>sostenerte en el momento exacto en el que ya no puedes ser quien eras, y aún no sabes quién estás empezando a ser</strong>.
-          </p>
+
+        <div class="manifesto-core" data-reveal>
+          <h2 class="manifesto-title">¿Qué es Caminar(se)?</h2>
+
+          <div class="manifesto-text-wrap">
+            <p class="lead-statement">
+              Es un acompañamiento emocional pensado para personas que están atravesando un cambio interno profundo. No se trata de superar una ruptura ni de alcanzar una meta. Se trata de <strong>sostenerte en el momento exacto en el que ya no puedes ser quien eras, y aún no sabes quién estás empezando a ser</strong>.
+            </p>
+          </div>
         </div>
-        <div class="editorial-values-strip" data-reveal>
-          <span>Humana</span> · <span>Honesta</span> · <span>Serena</span> · <span>Consciente</span> · <span>Acompañante</span> · <span>Sin juicios</span>
+
+        <div class="values-constellation" data-reveal>
+          <div class="value-node"><span class="node-bullet"></span> Humana</div>
+          <div class="value-node"><span class="node-bullet"></span> Honesta</div>
+          <div class="value-node"><span class="node-bullet"></span> Serena</div>
+          <div class="value-node"><span class="node-bullet"></span> Consciente</div>
+          <div class="value-node"><span class="node-bullet"></span> Acompañante</div>
+          <div class="value-node"><span class="node-bullet"></span> Sin juicios</div>
         </div>
       </div>
     </section>
 
-    <!-- PAUSA VISUAL: EL CAMINO FOTOGRÁFICO DOCUMENTAL -->
-    <section class="section-photo-interlude" aria-hidden="true">
-      <div class="interlude-img-wrapper" data-parallax>
-        <img src="images/b3bab6531587b5eff20bce1ed2a58cf9.jpg" alt="Sendero con escalones y barandilla de madera en el bosque" width="1200" height="1600" loading="lazy">
-      </div>
-      <div class="interlude-overlay-text">
-        <p>“No para repararte. Sino para sostenerte mientras eliges no dejarte atrás.”</p>
+    <!-- 03. PAUSA VISUAL -->
+    <section class="zenith-window" aria-label="Ventana contemplativa">
+      <div class="zenith-frame">
+        <img src="images/b3bab6531587b5eff20bce1ed2a58cf9.jpg" alt="Sendero de piedra y madera entre árboles frondosos" width="1400" height="900" loading="lazy">
+        <div class="zenith-tint"></div>
+        <div class="zenith-text-capsule" data-reveal>
+          <span class="zenith-tag">REGISTRO DE CAMPO</span>
+          <p class="zenith-quote">“No para repararte. Sino para sostenerte mientras eliges no dejarte atrás.”</p>
+          <span class="zenith-coord">28°18'N 16°15'W · EL SENDERO</span>
+        </div>
       </div>
     </section>
 
-    <!-- ACTO 3: PROCESOS (SEÑALES / CARRUSEL EDITORIAL) -->
-    <section class="section section-signals" aria-label="Procesos atendidos">
-      <div class="container">
-        <div class="section-header">
-          <span class="mono-label" data-reveal>SEÑALES DE TRÁNSITO</span>
-          <h2 class="editorial-heading" data-reveal>Acompaño procesos como estos:</h2>
+    <!-- 04. SEÑALES -->
+    <section class="signals-section" aria-label="Procesos atendidos">
+      <div class="signals-bounds">
+        <div class="signals-header" data-reveal>
+          <div class="curator-index">
+            <span class="spec-id">[ 02 · SEÑALES ]</span>
+            <div class="spec-line"></div>
+            <span class="spec-legend">DIAGNÓSTICO INTERIOR</span>
+          </div>
+          <h2 class="signals-title">Acompaño procesos como estos:</h2>
         </div>
 
-        <div class="signals-editorial-flow">
-          <article class="signal-item" data-reveal>
-            <span class="mono-number">01</span>
-            <div class="signal-body">
+        <div class="editorial-dossier">
+          <div class="dossier-row" data-reveal>
+            <div class="dossier-col-id">
+              <span class="dossier-num">01</span>
+              <span class="dossier-state">DESCONEXIÓN</span>
+            </div>
+            <div class="dossier-col-content">
               <p>Te sientes <strong>desconectada</strong> de la vida que has construido: pareja, entorno, rutinas…</p>
             </div>
-          </article>
+          </div>
 
-          <article class="signal-item" data-reveal>
-            <span class="mono-number">02</span>
-            <div class="signal-body">
+          <div class="dossier-row" data-reveal>
+            <div class="dossier-col-id">
+              <span class="dossier-num">02</span>
+              <span class="dossier-state">RUPTURA</span>
+            </div>
+            <div class="dossier-col-content">
               <p>Has empezado a elegirte… y todo alrededor se <strong>mueve o se rompe</strong>.</p>
             </div>
-          </article>
+          </div>
 
-          <article class="signal-item" data-reveal>
-            <span class="mono-number">03</span>
-            <div class="signal-body">
+          <div class="dossier-row" data-reveal>
+            <div class="dossier-col-id">
+              <span class="dossier-num">03</span>
+              <span class="dossier-state">VÉRTIGO</span>
+            </div>
+            <div class="dossier-col-content">
               <p>Estás en pausa, sin certezas, con culpa o miedo por dejar atrás <strong>lo que ya no encaja</strong>.</p>
             </div>
-          </article>
+          </div>
 
-          <article class="signal-item" data-reveal>
-            <span class="mono-number">04</span>
-            <div class="signal-body">
+          <div class="dossier-row" data-reveal>
+            <div class="dossier-col-id">
+              <span class="dossier-num">04</span>
+              <span class="dossier-state">PATRÓN</span>
+            </div>
+            <div class="dossier-col-content">
               <p>Te reconoces en <strong>patrones</strong> de dependencia emocional o complacencia, y no quieres seguir ahí.</p>
             </div>
-          </article>
+          </div>
         </div>
 
-        <div class="quote-intermezzo text-center" data-reveal>
-          <div class="brand-path-icon sm" aria-hidden="true">
-            <svg viewBox="0 0 100 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M2 18C25 4 45 22 70 8C82 0 92 10 98 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
-            </svg>
-          </div>
-          <blockquote>
-            “Caminar(se) es el espacio donde todo eso puede nombrarse, respirarse, y sostenerse sin juicio.”
-          </blockquote>
+        <div class="dossier-interlude" data-reveal>
+          <div class="interlude-quote-mark">“</div>
+          <p class="interlude-text">
+            Caminar(se) es el espacio donde todo eso puede nombrarse, respirarse, y sostenerse sin juicio.
+          </p>
         </div>
       </div>
     </section>
 
-    <!-- ACTO 4: CÓMO ES EL ACOMPAÑAMIENTO & INVERSIÓN -->
-    <section id="inversion" class="section section-methodology" aria-label="Cómo se trabaja">
-      <div class="container">
-        <div class="method-split">
-          <div class="method-text">
-            <span class="mono-label" data-reveal>MÉTODO Y PRESENCIA</span>
-            <h2 class="editorial-heading" data-reveal>¿Cómo es el acompañamiento?</h2>
-            
-            <ul class="method-principles" data-reveal>
-              <li>
-                <p>No hay métodos cerrados, pero sí <strong>presencia real y experiencia sostenida</strong>.</p>
-              </li>
-              <li>
-                <p>Trabajo con <strong>escucha activa, mirada transgeneracional</strong> y herramientas emocionales.</p>
-              </li>
-              <li>
-                <p>Tú marcas el ritmo. Yo acompaño desde el <strong>cuidado y la ética</strong>.</p>
-              </li>
-            </ul>
+    <!-- 05. MÉTODO -->
+    <section id="inversion" class="atelier-section" aria-label="Metodología">
+      <div class="atelier-bounds">
+        <div class="curator-index" data-reveal>
+          <span class="spec-id">[ 03 · MÉTODO ]</span>
+          <div class="spec-line"></div>
+          <span class="spec-legend">CÓDIGO Y ÉTICA</span>
+        </div>
 
-            <div class="core-truth-card" data-reveal>
-              <p class="truth-text">
+        <div class="atelier-grid">
+          <div class="atelier-narrative">
+            <h2 class="atelier-heading" data-reveal>¿Cómo es el acompañamiento?</h2>
+            
+            <div class="principles-flow">
+              <div class="principle-entry" data-reveal>
+                <span class="principle-bullet">I</span>
+                <p>No hay métodos cerrados, pero sí <strong>presencia real y experiencia sostenida</strong>.</p>
+              </div>
+
+              <div class="principle-entry" data-reveal>
+                <span class="principle-bullet">II</span>
+                <p>Trabajo con <strong>escucha activa, mirada transgeneracional</strong> y herramientas emocionales.</p>
+              </div>
+
+              <div class="principle-entry" data-reveal>
+                <span class="principle-bullet">III</span>
+                <p>Tú marcas el ritmo. Yo acompaño desde el <strong>cuidado y la ética</strong>.</p>
+              </div>
+            </div>
+
+            <div class="monolith-credo" data-reveal>
+              <span class="credo-mono">LA META ES EL REGRESO</span>
+              <p class="credo-main">
                 El objetivo no es llegar a ninguna parte. <br>
-                <span>Es volver a habitarte.</span>
+                <em>Es volver a habitarte.</em>
               </p>
             </div>
           </div>
 
-          <div class="method-dialogue" data-reveal>
-            <div class="invitation-box">
-              <span class="mono-tag tag-terracota">PRIMER CONTACTO</span>
-              <h3>¿Quieres saber si esto es para ti?</h3>
-              <p>Te ofrezco una llamada gratuita de 20 minutos. Me cuentas lo que estás viviendo. Te cuento cómo trabajo. Y tú decides.</p>
-              <a href="https://wa.link/zugo5a" target="_blank" rel="noopener noreferrer" class="btn btn-primary full-width">
-                Quiero reservar mi llamada gratuita
-              </a>
+          <div class="atelier-card-col" data-reveal>
+            <div class="first-step-panel">
+              <div class="panel-header-mini">
+                <span class="stamp-chip">LLAMADA DE 20 MINUTOS</span>
+                <span class="stamp-chip free">GRATUITA</span>
+              </div>
+              <h3 class="panel-title">¿Quieres saber si esto es para ti?</h3>
+              <p class="panel-prose">
+                Te ofrezco una llamada gratuita de 20 minutos. Me cuentas lo que estás viviendo. Te cuento cómo trabajo. Y tú decides.
+              </p>
+              <div class="panel-cta">
+                <a href="https://wa.link/zugo5a" target="_blank" rel="noopener noreferrer" class="btn-atelier solid block">
+                  <span>Quiero reservar mi llamada gratuita</span>
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 13L13 1M13 1H3M13 1V11" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </a>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ACTO 5: SOBRE MÍ & FORMACIÓN -->
-    <section id="quien-soy" class="section section-bio" aria-label="Sobre mí">
-      <div class="container">
-        <div class="bio-layout">
-          <div class="bio-visual" data-reveal>
-            <div class="image-frame-portrait">
-              <img src="images/foto 4.jpg" alt="Icíar sonriente sentada en unas escaleras de madera en la montaña" width="700" height="933" loading="lazy">
-              <div class="frame-tag-mono">SOBRE MÍ · ICÍAR ALONSO</div>
+    <!-- 06. QUIÉN SOY -->
+    <section id="quien-soy" class="profile-section" aria-label="Quién soy">
+      <div class="profile-bounds">
+        <div class="curator-index" data-reveal>
+          <span class="spec-id">[ 04 · IDENTIDAD ]</span>
+          <div class="spec-line"></div>
+          <span class="spec-legend">SOBRE LA ACOMPAÑANTE</span>
+        </div>
+
+        <div class="profile-layout">
+          <div class="profile-image-col" data-reveal>
+            <div class="portrait-polaroid">
+              <img src="images/foto 4.jpg" alt="Icíar Alonso sonriente sentada en una escalera rústica de madera" width="700" height="933" loading="lazy">
+              <div class="polaroid-label">
+                <span>ICÍAR ALONSO</span>
+                <span>COACH ECOINTEGRATIVA</span>
+              </div>
             </div>
           </div>
 
-          <div class="bio-content">
-            <span class="mono-label" data-reveal>HUMANA Y CERCANA</span>
-            <h2 class="editorial-heading" data-reveal>Sobre mí</h2>
-            <div class="bio-prose" data-reveal>
-              <p>
+          <div class="profile-bio-col">
+            <h2 class="profile-title" data-reveal>Sobre mí</h2>
+            
+            <div class="bio-paragraphs" data-reveal>
+              <p class="bio-p lead">
                 Soy Icíar. Y no trabajo desde fórmulas, sino desde la experiencia. También yo he transitado rupturas internas, identidades que se caen, decisiones que remueven todo.
               </p>
-              <p>
+              <p class="bio-p">
                 Mi formación incluye coaching ecointegrativo, inteligencia emocional, análisis transgeneracional y herramientas de acompañamiento familiar y de pareja. <strong>Pero lo más importante es que sé lo que significa recomponerse desde dentro.</strong>
               </p>
             </div>
 
-            <!-- Respaldo Profesional -->
-            <div class="credentials-block" data-reveal>
-              <h3 class="credentials-title">Formación profesional</h3>
-              <p class="credentials-sub">
+            <div class="curriculum-ledger" data-reveal>
+              <h3 class="curriculum-heading">Formación profesional</h3>
+              <p class="curriculum-sub">
                 Aunque ya te conté que no trabajo desde fórmulas, sí hay un respaldo profesional detrás. Aquí te dejo las formaciones que me han acompañado (y algunas que sigo en camino).
               </p>
-              <ul class="credentials-list">
-                <li>Coach Ecointegrativa (ICF & ASESCO)</li>
-                <li>Coaching educativo (Método 7 colores & Educar Viéndonos)</li>
-                <li>Coaching de familia y pareja</li>
-                <li>Inteligencia Emocional</li>
-                <li>Heridas Emocionales</li>
-                <li>Análisis Transgeneracional</li>
-                <li>Actualmente cursando Practitioner en PNL, con certificación ICF.</li>
+              
+              <ul class="ledger-index">
+                <li><span class="ledger-dash">—</span> Coach Ecointegrativa (ICF & ASESCO)</li>
+                <li><span class="ledger-dash">—</span> Coaching educativo (Método 7 colores & Educar Viéndonos)</li>
+                <li><span class="ledger-dash">—</span> Coaching de familia y pareja</li>
+                <li><span class="ledger-dash">—</span> Inteligencia Emocional</li>
+                <li><span class="ledger-dash">—</span> Heridas Emocionales</li>
+                <li><span class="ledger-dash">—</span> Análisis Transgeneracional</li>
+                <li><span class="ledger-dash">—</span> Actualmente cursando Practitioner en PNL, con certificación ICF.</li>
               </ul>
             </div>
           </div>
@@ -279,88 +348,106 @@
       </div>
     </section>
 
-    <!-- ACTO 6: TESTIMONIOS -->
-    <section id="testimonios" class="section section-testimonials" aria-label="Testimonios">
-      <div class="container">
-        <div class="section-header text-center">
-          <span class="mono-label" data-reveal>TESTIMONIO ANÓNIMO</span>
-          <h2 class="editorial-heading" data-reveal>Lo dicen ellas</h2>
-          <p class="section-footnote" data-reveal>
+    <!-- 07. TESTIMONIOS -->
+    <section id="testimonios" class="voices-section" aria-label="Testimonios">
+      <div class="voices-bounds">
+        <div class="voices-header text-center" data-reveal>
+          <div class="curator-index center">
+            <span class="spec-id">[ 05 · TESTIMONIOS ]</span>
+            <div class="spec-line"></div>
+            <span class="spec-legend">VOCES ANÓNIMAS</span>
+          </div>
+          <h2 class="voices-title">Lo dicen ellas</h2>
+          <p class="voices-disclaimer">
             <em>Testimonios reales compartidos de forma anónima, con el consentimiento de las personas acompañadas.</em>
           </p>
         </div>
 
-        <div class="testimonials-triptych">
-          <article class="testimony-card" data-reveal>
-            <div class="quote-mark" aria-hidden="true">“</div>
-            <p>La confianza en mí misma ha crecido muchísimo. Aprendí a mirarme con amor, con paciencia, incluso con orgullo por decisiones que antes dudaba. Es duro, pero necesario. Esta profundidad solo está en procesos como este.</p>
+        <div class="parchment-triptych">
+          <article class="parchment-sheet" data-reveal>
+            <span class="sheet-number">REGISTRO A.</span>
+            <blockquote class="sheet-text">
+              “La confianza en mí misma ha crecido muchísimo. Aprendí a mirarme con amor, con paciencia, incluso con orgullo por decisiones que antes dudaba. Es duro, pero necesario. Esta profundidad solo está en procesos como este.”
+            </blockquote>
           </article>
 
-          <article class="testimony-card" data-reveal>
-            <div class="quote-mark" aria-hidden="true">“</div>
-            <p>Por primera vez me comprometí con cada propuesta del proceso. Incluso lo que no entendía en el momento, luego cobraba sentido. Sentí que Icíar se adaptaba a mí, sin forzarme. Y el espacio físico, esos pasos entre árboles, fue parte de la transformación.</p>
+          <article class="parchment-sheet highlight" data-reveal>
+            <span class="sheet-number">REGISTRO B.</span>
+            <blockquote class="sheet-text">
+              “Por primera vez me comprometí con cada propuesta del proceso. Incluso lo que no entendía en el momento, luego cobraba sentido. Sentí que Icíar se adaptaba a mí, sin forzarme. Y el espacio físico, esos pasos entre árboles, fue parte de la transformación.”
+            </blockquote>
           </article>
 
-          <article class="testimony-card" data-reveal>
-            <div class="quote-mark" aria-hidden="true">“</div>
-            <p>Acogimiento. Refugio. Claridad. Honestidad. Pasión. Así describiría lo que viví aquí. Sin juicio, con sostén. Lo recomiendo siempre que alguien me cuenta que se siente perdida.</p>
+          <article class="parchment-sheet" data-reveal>
+            <span class="sheet-number">REGISTRO C.</span>
+            <blockquote class="sheet-text">
+              “Acogimiento. Refugio. Claridad. Honestidad. Pasión. Así describiría lo que viví aquí. Sin juicio, con sostén. Lo recomiendo siempre que alguien me cuenta que se siente perdida.”
+            </blockquote>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- ACTO 7: PREGUNTAS FRECUENTES -->
-    <section id="faq" class="section section-faq" aria-label="Preguntas Frecuentes">
-      <div class="container container-narrow">
-        <div class="section-header text-center">
-          <span class="mono-label" data-reveal>RESPUESTAS CLARAS</span>
-          <h2 class="editorial-heading" data-reveal>Preguntas frecuentes</h2>
+    <!-- 08. FAQ -->
+    <section id="faq" class="inquiry-section" aria-label="Preguntas Frecuentes">
+      <div class="inquiry-bounds">
+        <div class="inquiry-header text-center" data-reveal>
+          <div class="curator-index center">
+            <span class="spec-id">[ 06 · CLARIDAD ]</span>
+            <div class="spec-line"></div>
+            <span class="spec-legend">PREGUNTAS FRECUENTES</span>
+          </div>
+          <h2 class="inquiry-title">Preguntas frecuentes</h2>
         </div>
 
-        <div class="accordion" id="faq-accordion">
-          <div class="accordion-item" data-reveal>
-            <button class="accordion-trigger" aria-expanded="false" aria-controls="faq-ans-1" id="faq-q-1">
-              <span>¿Esto es solo para quien ha tenido una ruptura?</span>
-              <span class="icon-plus" aria-hidden="true"></span>
+        <div class="editorial-accordion" id="accordion">
+          <div class="accordion-slice" data-reveal>
+            <button class="slice-trigger" aria-expanded="false" aria-controls="slice-panel-1" id="slice-btn-1">
+              <span class="slice-index">01</span>
+              <span class="slice-title">¿Esto es solo para quien ha tenido una ruptura?</span>
+              <span class="slice-cross" aria-hidden="true"></span>
             </button>
-            <div class="accordion-panel" id="faq-ans-1" role="region" aria-labelledby="faq-q-1" hidden>
-              <div class="panel-inner">
+            <div class="slice-drawer" id="slice-panel-1" role="region" aria-labelledby="slice-btn-1" hidden>
+              <div class="drawer-content">
                 <p>No. No es necesario que haya una ruptura externa. Muchas veces acompañamos un proceso interno: cuando ya no encajas donde estabas, pero aún no sabes dónde ir.</p>
               </div>
             </div>
           </div>
 
-          <div class="accordion-item" data-reveal>
-            <button class="accordion-trigger" aria-expanded="false" aria-controls="faq-ans-2" id="faq-q-2">
-              <span>¿Tengo que estar muy mal para empezar esto?</span>
-              <span class="icon-plus" aria-hidden="true"></span>
+          <div class="accordion-slice" data-reveal>
+            <button class="slice-trigger" aria-expanded="false" aria-controls="slice-panel-2" id="slice-btn-2">
+              <span class="slice-index">02</span>
+              <span class="slice-title">¿Tengo que estar muy mal para empezar esto?</span>
+              <span class="slice-cross" aria-hidden="true"></span>
             </button>
-            <div class="accordion-panel" id="faq-ans-2" role="region" aria-labelledby="faq-q-2" hidden>
-              <div class="panel-inner">
+            <div class="slice-drawer" id="slice-panel-2" role="region" aria-labelledby="slice-btn-2" hidden>
+              <div class="drawer-content">
                 <p>En absoluto. Puedes estar en un momento de duda, de pausa, de miedo… No hace falta tocar fondo. Hace falta solo sentir que no puedes (ni quieres) seguir igual.</p>
               </div>
             </div>
           </div>
 
-          <div class="accordion-item" data-reveal>
-            <button class="accordion-trigger" aria-expanded="false" aria-controls="faq-ans-3" id="faq-q-3">
-              <span>¿Es terapia?</span>
-              <span class="icon-plus" aria-hidden="true"></span>
+          <div class="accordion-slice" data-reveal>
+            <button class="slice-trigger" aria-expanded="false" aria-controls="slice-panel-3" id="slice-btn-3">
+              <span class="slice-index">03</span>
+              <span class="slice-title">¿Es terapia?</span>
+              <span class="slice-cross" aria-hidden="true"></span>
             </button>
-            <div class="accordion-panel" id="faq-ans-3" role="region" aria-labelledby="faq-q-3" hidden>
-              <div class="panel-inner">
+            <div class="slice-drawer" id="slice-panel-3" role="region" aria-labelledby="slice-btn-3" hidden>
+              <div class="drawer-content">
                 <p>No. Es un proceso de acompañamiento emocional. No diagnóstico, no patologiza, no impone. Acompaña desde la vivencia y la escucha.</p>
               </div>
             </div>
           </div>
 
-          <div class="accordion-item" data-reveal>
-            <button class="accordion-trigger" aria-expanded="false" aria-controls="faq-ans-4" id="faq-q-4">
-              <span>¿Cuánto tiempo dura?</span>
-              <span class="icon-plus" aria-hidden="true"></span>
+          <div class="accordion-slice" data-reveal>
+            <button class="slice-trigger" aria-expanded="false" aria-controls="slice-panel-4" id="slice-btn-4">
+              <span class="slice-index">04</span>
+              <span class="slice-title">¿Cuánto tiempo dura?</span>
+              <span class="slice-cross" aria-hidden="true"></span>
             </button>
-            <div class="accordion-panel" id="faq-ans-4" role="region" aria-labelledby="faq-q-4" hidden>
-              <div class="panel-inner">
+            <div class="slice-drawer" id="slice-panel-4" role="region" aria-labelledby="slice-btn-4" hidden>
+              <div class="drawer-content">
                 <p>No hay una duración fija. Los packs están pensados como una forma de comenzar: 3 sesiones pueden darte mucha claridad, y 6 un sostén más profundo. A veces ahí termina. A veces se necesita continuar. Lo importante no es cerrarlo “bien”, sino sentirte acompañada en un proceso que es solo tuyo.</p>
               </div>
             </div>
@@ -369,175 +456,146 @@
       </div>
     </section>
 
-    <!-- ACTO 8: RECURSOS GRATUITOS -->
-    <section id="recursos" class="section section-resources" aria-label="Recursos Gratuitos y Regalos">
-      <div class="container">
-        <div class="section-header text-center">
-          <span class="mono-label" data-reveal>REGALO</span>
-          <h2 class="editorial-heading" data-reveal>Por llegar hasta aquí, quiero regalarte algo</h2>
-          <p class="resources-subtitle" data-reveal>Caminar(se) empieza con un primer paso.</p>
+    <!-- 09. RECURSOS GRATUITOS -->
+    <section id="recursos" class="gift-section" aria-label="Recursos Gratuitos">
+      <div class="gift-bounds">
+        <div class="gift-header text-center" data-reveal>
+          <div class="curator-index center">
+            <span class="spec-id">[ 07 · LIBRE ACCESO ]</span>
+            <div class="spec-line"></div>
+            <span class="spec-legend">EL REGALO</span>
+          </div>
+          <h2 class="gift-title">Por llegar hasta aquí, quiero regalarte algo</h2>
+          <p class="gift-sub">Caminar(se) empieza con un primer paso.</p>
         </div>
 
-        <div class="resources-grid">
-          
-          <!-- Recurso 1: Mini meditación -->
-          <article class="resource-card" data-reveal>
-            <span class="mono-tag tag-salvia">AUDIO GUIADO</span>
-            <h3 class="resource-title">Un momento de calma</h3>
-            <p class="resource-desc">
+        <div class="gift-showcase">
+          <article class="gift-slip" data-reveal>
+            <div class="slip-header">
+              <span class="slip-badge">AUDIO MEDITACIÓN</span>
+              <span class="slip-id">01 / CALMA</span>
+            </div>
+            <h3 class="slip-title">Un momento de calma</h3>
+            <p class="slip-text">
               Aquí tienes una mini meditación guiada para soltar lo que pesa y volver a tu calma. Haz clic y te llevo a la página para recibirla por email.
             </p>
-            <p class="resource-tip">
+            <p class="slip-aside">
               Si no aparece en tu bandeja principal, revisa spam o promociones (a veces se esconde ahí)
             </p>
-            <div class="resource-footer">
-              <a href="https://forms.zohopublic.eu/infoiciaralo1/form/EnviarMeditacinGuiada/formperma/l-tyTE-3J7M8Wt-0JWGtOgx0dVrHa4aOljRVWNnUgKw" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
-                Regálame un momento de calma
+            <div class="slip-action">
+              <a href="https://forms.zohopublic.eu/infoiciaralo1/form/EnviarMeditacinGuiada/formperma/l-tyTE-3J7M8Wt-0JWGtOgx0dVrHa4aOljRVWNnUgKw" target="_blank" rel="noopener noreferrer" class="btn-atelier line block">
+                <span>Regálame un momento de calma</span>
+                <svg width="12" height="12" viewBox="0 0 14 14" fill="none"><path d="M1 13L13 1M13 1H3M13 1V11" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
               </a>
-              <small class="resource-legal">Al hacer clic irás a una página segura para dejar tu email. Enseguida recibirás tu meditación por correo, guardada en Google Drive para que la disfrutes cuando quieras.</small>
+              <small class="slip-disclaimer">Al hacer clic irás a una página segura para dejar tu email. Enseguida recibirás tu meditación por correo, guardada en Google Drive para que la disfrutes cuando quieras.</small>
             </div>
           </article>
 
-          <!-- Recurso 2: Ritual Guiado -->
-          <article class="resource-card" data-reveal>
-            <span class="mono-tag tag-salvia">RITUAL EN 3 AUDIOS</span>
-            <h3 class="resource-title">Ritual guiado: “Lo que no se dijo”</h3>
-            <p class="resource-desc">
+          <article class="gift-slip" data-reveal>
+            <div class="slip-header">
+              <span class="slip-badge">RITUAL SIMBÓLICO</span>
+              <span class="slip-id">02 / CIERRE</span>
+            </div>
+            <h3 class="slip-title">Ritual guiado: “Lo que no se dijo”</h3>
+            <p class="slip-text">
               Una experiencia simbólica en 3 audios, para cerrar procesos abiertos sin necesidad del otro. Este recurso está pensado para momentos en los que quedó algo por decir, sentir o soltar… y quieres hacerlo desde dentro.
             </p>
-            <p class="resource-highlight">
+            <p class="slip-highlight">
               Puedes hacerlo sola, a tu ritmo. Es un regalo para ti.
             </p>
-            <div class="resource-footer">
-              <a href="https://forms.zohopublic.eu/infoiciaralo1/form/LoquenoseDijo/formperma/rvbY_zYEERVxdd-VYwOZD5M6fVC_hUoZPruYZGtyGwE" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
-                Acceder al ritual “Lo que no se dijo”
+            <div class="slip-action">
+              <a href="https://forms.zohopublic.eu/infoiciaralo1/form/LoquenoseDijo/formperma/rvbY_zYEERVxdd-VYwOZD5M6fVC_hUoZPruYZGtyGwE" target="_blank" rel="noopener noreferrer" class="btn-atelier line block">
+                <span>Acceder al ritual “Lo que no se dijo”</span>
+                <svg width="12" height="12" viewBox="0 0 14 14" fill="none"><path d="M1 13L13 1M13 1H3M13 1V11" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
               </a>
-              <small class="resource-legal">Al hacer clic irás a una página segura para dejar tu email. Enseguida recibirás tu recurso por correo, guardada en Google Drive para que la disfrutes cuando quieras.</small>
+              <small class="slip-disclaimer">Al hacer clic irás a una página segura para dejar tu email. Enseguida recibirás tu recurso por correo, guardada en Google Drive para que la disfrutes cuando quieras.</small>
             </div>
           </article>
 
-          <!-- Recurso 3: Workbook -->
-          <article class="resource-card" data-reveal>
-            <span class="mono-tag tag-salvia">WORKBOOK PRÁCTICO</span>
-            <h3 class="resource-title">Descubre cómo salir del bucle del juicio y los malentendidos</h3>
-            <p class="resource-desc">
+          <article class="gift-slip" data-reveal>
+            <div class="slip-header">
+              <span class="slip-badge">WORKBOOK PRÁCTICO</span>
+              <span class="slip-id">03 / CLARIDAD</span>
+            </div>
+            <h3 class="slip-title">Descubre cómo salir del bucle del juicio y los malentendidos</h3>
+            <p class="slip-text">
               Este workbook te guía paso a paso para identificar lo que realmente ocurre en una situación de conflicto y cómo liberar la carga emocional que generas al interpretarla desde la herida. Con ejercicios prácticos y preguntas poderosas para mirar de frente lo que duele… y dejar de tomártelo personal.
             </p>
-            <p class="resource-highlight">
+            <p class="slip-highlight">
               Caminar(se) también es dejar de creerte todo lo que dice tu mente.
             </p>
-            <div class="resource-footer">
-              <a href="https://forms.zohopublic.eu/infoiciaralo1/form/Libratedeldramapersonal/formperma/YfTHAR_SXDn4V8QqCV9Jk7TaJSbtaex4tN548t7zoGY" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
-                Libérate del drama personal
+            <div class="slip-action">
+              <a href="https://forms.zohopublic.eu/infoiciaralo1/form/Libratedeldramapersonal/formperma/YfTHAR_SXDn4V8QqCV9Jk7TaJSbtaex4tN548t7zoGY" target="_blank" rel="noopener noreferrer" class="btn-atelier line block">
+                <span>Libérate del drama personal</span>
+                <svg width="12" height="12" viewBox="0 0 14 14" fill="none"><path d="M1 13L13 1M13 1H3M13 1V11" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
               </a>
-              <small class="resource-legal">Al hacer clic irás a una página segura para dejar tu email. Enseguida recibirás tu workbook por correo, guardada en Google Drive para que la disfrutes cuando quieras.</small>
+              <small class="slip-disclaimer">Al hacer clic irás a una página segura para dejar tu email. Enseguida recibirás tu workbook por correo, guardada en Google Drive para que la disfrutes cuando quieras.</small>
             </div>
           </article>
-
         </div>
       </div>
     </section>
 
-    <!-- ACTO 9: CORRESPONDENCIA (09:47) -->
-    <section class="section section-newsletter" aria-label="Suscripción a cartas">
-      <div class="container container-narrow">
-        <div class="newsletter-editorial" data-reveal>
-          <span class="mono-label">CORRESPONDENCIA</span>
-          <h2 class="newsletter-headline">
-            Si estás cansada de ser la que aguanta todo… <br>
-            y luego se siente culpable por decir lo que piensa, <br>
-            <em>este espacio es para ti.</em>
-          </h2>
+    <!-- 10. CORRESPONDENCIA (TARJETA POSTAL FLUIDA & AMIGABLE) -->
+    <section class="postcard-section" aria-label="Correspondencia">
+      <div class="postcard-bounds">
+        <div class="curator-index center" data-reveal>
+          <span class="spec-id">[ 08 · CORRESPONDENCIA ]</span>
+          <div class="spec-line"></div>
+          <span class="spec-legend">CARTAS DE LAS 09:47</span>
+        </div>
 
-          <div class="newsletter-story">
-            <p class="lead-drop">Hay un momento que se repite.</p>
-            <p class="emphasis-staccato">
-              Dices algo.<br>
-              Te plantas.<br>
-              Por fin.
-            </p>
-            <p class="guilt-callout">
-              Y después llega la culpa, la que nunca te abandona
-            </p>
-            <blockquote class="internal-echoes">
-              “No debería haber dicho nada.”<br>
-              “He exagerado.”<br>
-              “Siempre complico las cosas.”
-            </blockquote>
-            <p class="conclusion-line">
-              <strong>No es drama. Es patrón.</strong>
+        <div class="postcard-envelope" data-reveal>
+          <div class="envelope-stamp">
+            <span class="stamp-time">09:47</span>
+            <span class="stamp-coffee">LA HORA DEL CAFÉ</span>
+          </div>
+
+          <div class="envelope-content">
+            <h2 class="envelope-title">
+              Si estás cansada de ser la que aguanta todo… <br>
+              y luego se siente culpable por decir lo que piensa, <br>
+              <em>este espacio es para ti.</em>
+            </h2>
+
+            <p class="envelope-subtitle">
+              Escribo casi siempre a las 09:47. Cartas a veces incómodas, a veces suaves, siempre honestas. Al suscribirte recibirás además un audio donde te cuento tres cosas que probablemente estás haciendo sin darte cuenta y que te mantienen en el mismo sitio.
             </p>
 
-            <div class="audience-manifesto">
-              <h3>Escribo para mujeres que ya no quieren seguir siendo la de siempre.</h3>
-              <p class="roles-list">
-                La amable.<br>
-                La disponible.<br>
-                La que cede.<br>
-                La que aguanta.
-              </p>
-              <p>Pero tampoco quieren convertirse en alguien dura o indiferente. Quieren entender qué les pasa. Y empezar a elegir distinto.</p>
-            </div>
-
-            <div class="audio-notice">
-              <h4>Al suscribirte recibirás un audio</h4>
-              <p>Donde te cuento tres cosas que probablemente estás haciendo sin darte cuenta y que te mantienen en el mismo sitio.</p>
-              <p class="clarity-punch">No es motivación. Es claridad.</p>
-            </div>
-
-            <div class="letters-routine">
-              <h4>¿Qué vas a recibir?</h4>
-              <p>
-                <strong>Cartas.</strong><br>
-                A veces incómodas.<br>
-                A veces suaves.<br>
-                Siempre honestas.
-              </p>
-              <p>Algunas veces hablaré de procesos reales. Otras te haré preguntas. Y cuando tenga sentido, te diré que puedes trabajar conmigo.</p>
-              <p class="honest-declaration">Vivo de esto. Y no me da vergüenza.</p>
-              
-              <div class="time-stamp">
-                <p><strong>Escribo casi siempre a las 09:47.</strong></p>
-                <p>La hora de mi café.</p>
-                <p class="rules-peace">
-                  Si algo te toca, respóndeme.<br>
-                  Si no, lee en silencio.<br>
-                  Y si algún día no quieres estar aquí, te vas.<br>
-                  <em>Yo tampoco me quedo donde no quiero estar.</em>
-                </p>
-              </div>
-            </div>
-
-            <div class="newsletter-cta-zone">
-              <a href="mailto:info@iciaralonsocoach.com?subject=Quiero%20recibir%20mis%20cartas" class="btn btn-terracota btn-large">
-                Quiero recibir mis cartas
+            <div class="envelope-actions">
+              <a href="mailto:info@iciaralonsocoach.com?subject=Quiero%20recibir%20mis%20cartas" class="btn-atelier terracotta-solid">
+                <span>Quiero recibir mis cartas</span>
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 13L13 1M13 1H3M13 1V11" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
               </a>
-              <p class="unsub-note">Puedes darte de baja cuando quieras.</p>
+              <a href="cartas.html" class="btn-atelier line">
+                <span>Leer de qué van las cartas</span>
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 7H13M13 7L7 1M13 7L7 13" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
             </div>
+
+            <span class="envelope-note">No es motivación. Es claridad. Puedes darte de baja cuando quieras.</span>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ACTO 10: CIERRE Y DESPEDIDA -->
-    <section class="section section-coda" aria-label="Cierre del relato">
-      <div class="container container-narrow text-center">
-        <div class="brand-path-icon center" aria-hidden="true">
-          <svg viewBox="0 0 100 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M2 18C25 4 45 22 70 8C82 0 92 10 98 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
-          </svg>
-        </div>
-        <h2 class="coda-quote" data-reveal>
+    <!-- 11. CIERRE Y CODA -->
+    <section class="coda-section" aria-label="Despedida">
+      <div class="coda-bounds text-center">
+        <h2 class="coda-philosophy" data-reveal>
           Caminar(se) no es un proceso para cambiar quién eres, sino para volver a ti, con todo lo que eres ahora.
         </h2>
-        <p class="coda-sub" data-reveal>Caminar(se) empieza con un primer paso.</p>
         
-        <div class="coda-actions" data-reveal>
-          <a href="https://wa.link/zugo5a" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-            Whastapp
+        <p class="coda-step-cue" data-reveal>
+          Caminar(se) empieza con un primer paso.
+        </p>
+
+        <div class="coda-direct-actions" data-reveal>
+          <a href="https://wa.link/zugo5a" target="_blank" rel="noopener noreferrer" class="btn-atelier solid">
+            <span>Whastapp</span>
           </a>
-          <a href="mailto:info@iciaralonsocoach.com" class="btn btn-ghost">
-            info@iciaralonsocoach.com
+          <a href="mailto:info@iciaralonsocoach.com" class="btn-atelier line">
+            <span>info@iciaralonsocoach.com</span>
           </a>
         </div>
       </div>
@@ -545,18 +603,24 @@
 
   </main>
 
-  <footer class="site-footer" role="contentinfo">
-    <div class="container footer-layout">
-      <div class="footer-brand">
-        <span class="footer-title">ICÍAR ALONSO COACH</span>
-        <span class="footer-sub">Caminar(se) · Acompañamiento emocional para transitar tus cambios</span>
+  <!-- FOOTER CON AUTORÍA AITOR HERNÁNDEZ -->
+  <footer class="colophon" role="contentinfo">
+    <div class="colophon-bounds">
+      <div class="colophon-primary">
+        <span class="colophon-logo">ICÍAR ALONSO COACH</span>
+        <p class="colophon-statement">Caminar(se) · Acompañamiento emocional íntimo y ético para transitar tus cambios.</p>
       </div>
-      <div class="footer-links">
+      
+      <div class="colophon-contact">
+        <span class="colophon-col-head">CONTACTO DIRECTO</span>
         <a href="mailto:info@iciaralonsocoach.com">info@iciaralonsocoach.com</a>
         <a href="https://wa.link/zugo5a" target="_blank" rel="noopener noreferrer">WhatsApp</a>
       </div>
-      <div class="footer-legal">
-        <span>&copy; <span id="current-year"></span> Icíar Alonso. Todos los derechos reservados.</span>
+
+      <div class="colophon-legal">
+        <span class="colophon-col-head">CRÉDITOS & EDICIÓN</span>
+        <p class="credits-line">Web hecha por <a href="https://aitorhernandez.es" target="_blank" rel="noopener" class="author-link">aitorhernandez.es</a></p>
+        <p>&copy; <span id="year-slot"></span> Icíar Alonso. Todos los derechos reservados.</p>
       </div>
     </div>
   </footer>
