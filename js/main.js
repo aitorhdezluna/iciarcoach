@@ -1,119 +1,46 @@
-/**
- * Caminar(se) — Icíar Coach
- * Interacciones nativas, revelaciones con IntersectionObserver y navegación accesible.
- */
+(() => {
+  const d = document, root = d.documentElement;
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  requestAnimationFrame(() => requestAnimationFrame(() => root.classList.add('ready')));
 
-document.addEventListener('DOMContentLoaded', () => {
-  // 1. Detección de JS habilitado
-  document.documentElement.classList.remove('no-js');
+  /* menú */
+  const btn = d.getElementById('menuBtn'), menu = d.getElementById('menu'), bar = d.getElementById('bar');
+  const setMenu = open => {
+    menu.hidden = !open; btn.setAttribute('aria-expanded', open); btn.textContent = open ? 'Cerrar' : 'Menú';
+    d.body.style.overflow = open ? 'hidden' : ''; if (open) menu.querySelector('a').focus();
+  };
+  btn.addEventListener('click', () => setMenu(menu.hidden));
+  menu.addEventListener('click', e => { if (e.target.closest('a')) setMenu(false); });
+  d.addEventListener('keydown', e => { if (e.key === 'Escape' && !menu.hidden) { setMenu(false); btn.focus(); } });
 
-  // 2. Control de año dinámico en footer
-  const yearElement = document.getElementById('current-year');
-  if (yearElement) {
-    yearElement.textContent = new Date().getFullYear();
+  /* palabras de la idea central */
+  const pt = d.getElementById('pauseText');
+  if (pt && !reduce) {
+    const txt = pt.textContent.trim();
+    pt.setAttribute('aria-label', txt);
+    pt.innerHTML = txt.split(' ').map(w => `<span class="w" aria-hidden="true">${w}</span>`).join(' ');
   }
+  const words = [...d.querySelectorAll('.pause__t .w')];
 
-  // 3. Menú Móvil Accesible
-  const menuToggle = document.getElementById('menu-toggle');
-  const primaryNav = document.getElementById('primary-nav');
-  const navLinks = document.querySelectorAll('.nav-link');
-
-  if (menuToggle && primaryNav) {
-    menuToggle.addEventListener('click', () => {
-      const isOpen = primaryNav.classList.contains('is-open');
-      toggleMenu(!isOpen);
-    });
-
-    // Cerrar al pulsar un enlace
-    navLinks.forEach(link => {
-      link.addEventListener('click', () => {
-        if (primaryNav.classList.contains('is-open')) {
-          toggleMenu(false);
-        }
-      });
-    });
-
-    // Cerrar con Escape
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && primaryNav.classList.contains('is-open')) {
-        toggleMenu(false);
-        menuToggle.focus();
-      }
-    });
-  }
-
-  function toggleMenu(state) {
-    primaryNav.classList.toggle('is-open', state);
-    menuToggle.classList.toggle('is-active', state);
-    menuToggle.setAttribute('aria-expanded', state);
-    document.body.style.overflow = state ? 'hidden' : '';
-  }
-
-  // 4. Header Auto-Hide con Scroll
-  const header = document.getElementById('site-header');
-  let lastScrollY = window.scrollY;
-  const scrollThreshold = 100;
-
-  window.addEventListener('scroll', () => {
-    const currentScrollY = window.scrollY;
-
-    if (currentScrollY > lastScrollY && currentScrollY > scrollThreshold) {
-      // Scroll hacia abajo -> ocultar
-      header.classList.add('header-hidden');
-    } else {
-      // Scroll hacia arriba -> mostrar
-      header.classList.remove('header-hidden');
+  /* scroll: barra, recorrido, palabras */
+  const dot = d.getElementById('trailDot'); let last = 0, tick = false;
+  const update = () => {
+    tick = false;
+    const y = scrollY, max = root.scrollHeight - innerHeight;
+    dot.style.setProperty('--y', (y / max * (innerHeight - 7)) + 'px');
+    bar.classList.toggle('is-hidden', y > last && y > 120); last = y;
+    if (words.length) {
+      const r = pt.getBoundingClientRect(), p = Math.min(1, Math.max(0, (innerHeight * .75 - r.top) / (r.height + innerHeight * .25)));
+      const n = Math.round(p * words.length);
+      words.forEach((w, i) => w.classList.toggle('on', i < n));
     }
+  };
+  addEventListener('scroll', () => { if (!tick) { tick = true; requestAnimationFrame(update); } }, { passive: true });
+  update();
 
-    lastScrollY = currentScrollY;
-  }, { passive: true });
-
-  // 5. Revelación Editorial con Intersection Observer
-  const reveals = document.querySelectorAll('[data-reveal]');
-  if ('IntersectionObserver' in window) {
-    const revealObserver = new IntersectionObserver((entries, observer) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('is-revealed');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, {
-      rootMargin: '0px 0px -60px 0px',
-      threshold: 0.15
-    });
-
-    reveals.forEach(element => revealObserver.observe(element));
-  } else {
-    // Fallback directo
-    reveals.forEach(el => el.classList.add('is-revealed'));
-  }
-
-  // 6. Acordeón Cinemático Accesible (FAQ)
-  const accordionTriggers = document.querySelectorAll('.accordion-trigger');
-  accordionTriggers.forEach(trigger => {
-    trigger.addEventListener('click', () => {
-      const isExpanded = trigger.getAttribute('aria-expanded') === 'true';
-      const targetPanelId = trigger.getAttribute('aria-controls');
-      const targetPanel = document.getElementById(targetPanelId);
-
-      // Cierre de otros paneles
-      accordionTriggers.forEach(otherTrigger => {
-        if (otherTrigger !== trigger) {
-          otherTrigger.setAttribute('aria-expanded', 'false');
-          const otherPanelId = otherTrigger.getAttribute('aria-controls');
-          const otherPanel = document.getElementById(otherPanelId);
-          if (otherPanel) {
-            otherPanel.hidden = true;
-          }
-        }
-      });
-
-      // Conmutar el seleccionado
-      trigger.setAttribute('aria-expanded', !isExpanded);
-      if (targetPanel) {
-        targetPanel.hidden = isExpanded;
-      }
-    });
-  });
-});
+  /* imágenes y línea final */
+  const io = new IntersectionObserver(es => es.forEach(e => {
+    if (e.isIntersecting) { e.target.classList.add('in', 'draw'); io.unobserve(e.target); }
+  }), { threshold: .25 });
+  d.querySelectorAll('.reveal, .end__line').forEach(el => io.observe(el));
+})();
