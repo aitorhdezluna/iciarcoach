@@ -181,3 +181,58 @@ html{scroll-behavior:auto}
  .js .line>span{transform:none}.js .reveal img{clip-path:none}.pause__t .w{opacity:1}
 .end__line path{stroke-dashoffset:0}
 }
+
+/* páginas legales */
+.page-reading{background:var(--marfil);min-height:100vh}
+.masthead{border-bottom:1px solid rgba(37,42,39,.14);padding:1.2rem var(--pad);background:rgba(244,240,231,.96)}
+.masthead-inner{max-width:86rem;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:2rem}
+.brand-signature{display:flex;flex-direction:column;gap:.18rem;text-decoration:none;color:var(--bosque)}
+.brand-top{font:600 .82rem var(--sans);letter-spacing:.2em}
+.brand-bottom{font-size:.67rem;letter-spacing:.1em;opacity:.65;transition:opacity .25s}
+.brand-signature:hover .brand-bottom{opacity:1}
+.masthead-center{font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;opacity:.55;text-align:right}
+.letter-reading-view{padding:clamp(3rem,7vw,7rem) var(--pad) 6rem}
+.letter-container{width:min(100%,52rem);margin:0 auto}
+.letter-stamp-top{display:flex;justify-content:space-between;align-items:center;gap:1rem;padding-bottom:1.15rem;border-bottom:1px solid rgba(37,42,39,.18);font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;opacity:.6}
+.spec-id{font-weight:700}
+.letter-header{padding:clamp(2.4rem,6vw,5rem) 0 2.2rem}
+.legal-eyebrow{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--terracota);font-weight:700;margin-bottom:1rem}
+.letter-headline{font:300 clamp(3rem,9vw,6.3rem)/.98 var(--serif);letter-spacing:-.035em;color:var(--bosque);max-width:10em}
+.legal-intro{font:300 clamp(1.15rem,3vw,1.45rem)/1.5 var(--serif);max-width:38rem;margin-top:1.5rem;color:rgba(37,42,39,.78)}
+.legal-doc-nav{display:flex;flex-wrap:wrap;gap:.35rem;border-top:1px solid rgba(37,42,39,.16);border-bottom:1px solid rgba(37,42,39,.16);padding:.65rem 0;margin-bottom:clamp(2.5rem,6vw,4.5rem)}
+.legal-doc-nav a{font-size:.78rem;letter-spacing:.06em;text-decoration:none;padding:.55rem .85rem;border-radius:99px;transition:background .25s,color .25s}
+.legal-doc-nav a:hover{background:var(--arena)}
+.legal-doc-nav a[aria-current="page"]{background:var(--bosque);color:var(--marfil)}
+.legal-prose-content{max-width:45rem;margin:0 auto}
+.legal-prose-content>p:first-child{font:300 1.18rem/1.65 var(--serif);color:var(--bosque);padding-bottom:2.5rem}
+.legal-block{padding:2.4rem 0;border-top:1px solid rgba(37,42,39,.17)}
+.legal-block h2{font:500 clamp(1.3rem,3vw,1.65rem)/1.2 var(--serif);color:var(--bosque);margin-bottom:1.15rem;letter-spacing:-.01em}
+.legal-block p{max-width:43rem;margin-bottom:1rem}
+.legal-block p:last-child{margin-bottom:0}
+.legal-data-list{list-style:none;padding:0;margin:0}
+.legal-data-list li{padding:.72rem 0;border-bottom:1px solid rgba(37,42,39,.1);font-size:.96rem}
+.legal-data-list li:first-child{border-top:1px solid rgba(37,42,39,.1)}
+.legal-data-list strong{color:var(--bosque)}
+.inline-legal-link{text-underline-offset:3px;text-decoration-thickness:1px}
+.legal-meta-note{margin-top:2.5rem;padding:1.25rem 1.4rem;border-left:2px solid var(--terracota);background:rgba(216,199,170,.22);font-size:.82rem;line-height:1.65;color:rgba(37,42,39,.75)}
+.legal-back-link{display:inline-block;margin-top:3.5rem;color:var(--bosque);font-size:.82rem;font-weight:700;text-decoration:none;border-bottom:1px solid rgba(41,72,63,.35);padding-bottom:.35rem;transition:border-color .25s,color .25s}
+.legal-back-link:hover{color:var(--terracota);border-color:var(--terracota)}
+.legal-nav-list{list-style:none;padding:0;margin:.5rem 0 1.5rem}
+.legal-nav-list li{display:inline}
+.legal-nav-list li:not(:last-child)::after{content:" · ";opacity:.4;margin:0 .3rem}
+.legal-nav-list a{text-underline-offset:3px}
+@media(max-width:42em){
+.masthead{padding-top:1rem;padding-bottom:1rem}
+.masthead-center{display:none}
+.letter-reading-view{padding-top:2.5rem}
+.letter-stamp-top{align-items:flex-start;flex-direction:column;gap:.35rem}
+.letter-header{padding-top:2.5rem}
+.legal-doc-nav{position:sticky;top:0;z-index:5;background:rgba(244,240,231,.96);backdrop-filter:blur(10px);margin-inline:calc(var(--pad)*-1);padding-inline:var(--pad)}
+.legal-doc-nav a{font-size:.72rem;padding:.5rem .65rem}
+.legal-prose-content>p:first-child{font-size:1.08rem}
+.legal-block{padding:2rem 0}
+.legal-data-list li{font-size:.91rem}
+}
+@media(prefers-reduced-motion:reduce){
+.legal-doc-nav a,.brand-bottom,.legal-back-link{transition:none}
+}
