@@ -1,0 +1,18 @@
+# CABECERAS DE SEGURIDAD RECOMENDADAS PARA CAMINAR(SE)
+
+<IfModule mod_headers.c>
+  # Protección contra sniffing de tipos MIME
+  Header set X-Content-Type-Options "nosniff"
+
+  # Protección contra framing y Clickjacking
+  Header set X-Frame-Options "SAMEORIGIN"
+
+  # Referrer Policy restrictiva y segura
+  Header set Referrer-Policy "strict-origin-when-cross-origin"
+
+  # Permissions Policy limitando acceso a sensores y hardware no utilizados
+  Header set Permissions-Policy "geolocation=(), camera=(), microphone=(), payment=()"
+
+  # Content-Security-Policy perfectamente compatible con Google Fonts y SVG local
+  Header set Content-Security-Policy "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; frame-ancestors 'self';"
+</IfModule>
