@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Aviso Legal — Icíar Alonso Coach</title>
+  <meta name="robots" content="noindex, follow">
+  <link rel="canonical" href="https://iciarcoach.es/aviso-legal.html">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='46' fill='%2329483F'/><text y='58' x='50' text-anchor='middle' font-family='serif' font-size='38' fill='%23F4F0E7'>I</text></svg>">
+  <meta name="theme-color" content="#F4F0E7">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..600,0..80;1,9..144,300..600,0..80&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="editorial-flow page-reading">
+  
+  <header class="masthead">
+    <div class="masthead-inner">
+      <a href="index.html" class="brand-signature" aria-label="Volver al inicio">
+        <span class="brand-top">ICÍAR ALONSO</span>
+        <span class="brand-bottom">← VOLVER AL INICIO</span>
+      </a>
+      <div class="masthead-center">
+        <span class="live-status">Información Legal LSSI-CE</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="letter-reading-view">
+    <div class="letter-container">
+      <div class="letter-stamp-top">
+        <span class="spec-id">[ CUMPLIMIENTO LSSI-CE ]</span>
+        <span class="spec-legend">ACTUALIZADO: OCTUBRE 2026</span>
+      </div>
+
+      <header class="letter-header">
+        <h1 class="letter-headline">Aviso Legal</h1>
+      </header>
+
+      <div class="legal-prose-content">
+        <p>En cumplimiento del artículo 10 de la Ley 34/2002, de 11 de julio, de Servicios de la Sociedad de la Información y de Comercio Electrónico (LSSI-CE), se ponen a disposición de los usuarios los datos identificativos del titular del sitio web:</p>
+
+        <section class="legal-block">
+          <h2>1. Datos Identificativos</h2>
+          <ul class="legal-data-list">
+            <li><strong>Titular:</strong> [ NOMBRE COMPLETO ]</li>
+            <li><strong>NIF/NIE:</strong> [ NIF ]</li>
+            <li><strong>Domicilio profesional:</strong> [ DOMICILIO ]</li>
+            <li><strong>Correo electrónico de contacto:</strong> [ EMAIL ] (info@iciaralonsocoach.com)</li>
+            <li><strong>Teléfono de contacto:</strong> [ TELÉFONO ]</li>
+            <li><strong>Actividad / Denominación comercial:</strong> Acompañamiento emocional, coaching y divulgación bajo la marca Caminar(se).</li>
+            <li><strong>Información colegial (si aplica):</strong> [ COLEGIO PROFESIONAL ] - [ Nº DE COLEGIACIÓN ]</li>
+          </ul>
+        </section>
+
+        <section class="legal-block">
+          <h2>2. Naturaleza de los Servicios y Delimitación Profesional</h2>
+          <p>Los servicios prestados a través de este sitio web corresponden exclusivamente a procesos de <strong>acompañamiento emocional, desarrollo personal y coaching</strong>. En ningún caso constituyen, sustituyen ni pretenden equivaler a diagnóstico médico, psicoterapia clínica regulada ni tratamiento sanitario en los términos de la Ley 44/2003, de Ordenación de las Profesiones Sanitarias.</p>
+          <p>Si la persona usuaria requiere intervención en salud mental clínica o padece un trastorno psiquiátrico diagnosticado, se le insta a acudir a los profesionales sanitarios y centros asistenciales competentes.</p>
+        </section>
+
+        <section class="legal-block">
+          <h2>3. Condiciones Generales de Uso</h2>
+          <p>El acceso y navegación por este sitio web atribuye la condición de persona usuaria, implicando la aceptación plena y sin reservas de las presentes disposiciones. La persona usuaria se compromete a hacer un uso lícito y ético de los contenidos y servicios, absteniéndose de ocasionar daños en los sistemas físicos o lógicos del titular o de terceros.</p>
+        </section>
+
+        <section class="legal-block">
+          <h2>4. Propiedad Intelectual e Industrial</h2>
+          <p>La totalidad de los elementos contenidos en este sitio web —incluyendo de forma enunciativa y no limitativa: textos literarios, metodología Caminar(se), diseño editorial, código fuente, logotipos, imágenes y audios— son titularidad exclusiva de [ NOMBRE COMPLETO ] o cuentan con la preceptiva autorización de terceros. Queda expresamente prohibida la reproducción, distribución o comunicación pública sin consentimiento previo y por escrito.</p>
+        </section>
+
+        <section class="legal-block">
+          <h2>5. Exclusión de Responsabilidad</h2>
+          <p>El titular no garantiza la inexistencia de interrupciones o errores en el acceso a la web, si bien adoptará diligentemente cuantas medidas técnicas resulten exigibles para evitar fallos y restablecer la comunicación con la mayor celeridad posible.</p>
+        </section>
+
+        <section class="legal-block">
+          <h2>6. Legislación Aplicable y Jurisdicción</h2>
+          <p>Las relaciones establecidas entre el titular y la persona usuaria se regirán con arreglo a la legislación española vigente. Para la resolución de controversias derivadas de la interpretación o ejecución del presente aviso, las partes se someten a los juzgados y tribunales del domicilio del usuario, o subsidiariamente a los de [ DOMICILIO / CIUDAD ].</p>
+        </section>
+
+        <p class="legal-meta-note"><em>Borrador técnico pendiente de validación jurídica definitiva por parte del titular.</em></p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="colophon" role="contentinfo">
+    <div class="colophon-bounds">
+      <div class="colophon-primary">
+        <span class="colophon-logo">ICÍAR ALONSO COACH</span>
+        <p class="colophon-statement">Caminar(se) · Acompañamiento emocional íntimo y ético para transitar tus cambios.</p>
+      </div>
+      <div class="colophon-contact">
+        <span class="colophon-col-head">CONTACTO DIRECTO</span>
+        <a href="mailto:info@iciaralonsocoach.com">info@iciaralonsocoach.com</a>
+        <a href="https://wa.link/zugo5a" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+      </div>
+      <div class="colophon-legal">
+        <span class="colophon-col-head">LEGAL & EDICIÓN</span>
+        <ul class="legal-nav-list">
+          <li><a href="aviso-legal.html">Aviso Legal</a></li>
+          <li><a href="politica-privacidad.html">Política de Privacidad</a></li>
+          <li><a href="politica-cookies.html">Política de Cookies</a></li>
+        </ul>
+        <p class="credits-line">Web hecha por <a href="https://aitorhernandez.es" target="_blank" rel="noopener noreferrer" class="author-link">aitorhernandez.es</a></p>
+        <p>&copy; <span id="year-slot"></span> Icíar Alonso. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
