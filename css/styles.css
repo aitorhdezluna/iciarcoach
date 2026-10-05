@@ -236,3 +236,8 @@ html{scroll-behavior:auto}
 @media(prefers-reduced-motion:reduce){
 .legal-doc-nav a,.brand-bottom,.legal-back-link{transition:none}
 }
+
+/* testimonios: una sola voz visible cuando JavaScript está activo */
+.js .voces__stage{position:relative;min-height:clamp(16rem,34vw,24rem)}
+.js .voces .voz{grid-area:1/1;align-self:start}
+.js .voces__nav{display:flex}
