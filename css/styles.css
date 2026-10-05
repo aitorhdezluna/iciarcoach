@@ -169,3 +169,177 @@ details p{padding:0 0 1.6rem;max-width:40rem}
  .js .line>span{transform:none}.js .reveal img{clip-path:none}.pause__t .w{opacity:1}
  .end__line path{stroke-dashoffset:0}
 }
+
+/* ==========================================================================
+   MEJORAS DE ACCESIBILIDAD, FORMULARIOS Y ELEMENTOS LEGALES (RGPD/LSSI)
+   ========================================================================== */
+
+/* 1. Formularios de Newsletter Accesibles */
+.newsletter-subscription-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin-block: 1.5rem;
+  max-width: 600px;
+}
+
+.subscription-input-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.form-input-editorial {
+  flex-grow: 1;
+  min-width: 260px;
+  padding: 0.95rem 1.4rem;
+  border: 1px solid var(--line-stroke);
+  background-color: var(--bg-pure);
+  border-radius: 9999px;
+  font-family: var(--font-text);
+  font-size: 0.9rem;
+  color: var(--c-carbon);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-input-editorial:focus {
+  outline: none;
+  border-color: var(--c-bosque);
+  box-shadow: 0 0 0 3px rgba(41, 72, 63, 0.12);
+}
+
+.consent-check-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  text-align: left;
+}
+
+.form-checkbox-editorial {
+  appearance: auto;
+  accent-color: var(--c-bosque);
+  margin-top: 0.25rem;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.consent-label {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  line-height: 1.45;
+  cursor: pointer;
+}
+
+.inline-legal-link {
+  color: var(--c-bosque);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  font-weight: 600;
+}
+
+.inline-legal-link:hover {
+  color: var(--c-terracota);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* 2. Listas de enlaces legales en el Footer */
+.legal-nav-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  margin-bottom: 0.75rem;
+}
+
+.legal-nav-list a {
+  color: var(--text-muted);
+  font-size: 0.8125rem;
+  transition: color 0.2s ease;
+}
+
+.legal-nav-list a:hover {
+  color: var(--c-bosque);
+  text-decoration: underline;
+}
+
+.colophon-disclaimer {
+  font-size: 0.75rem;
+  color: var(--text-light);
+  margin-top: 0.5rem;
+  line-height: 1.4;
+  max-width: 440px;
+}
+
+/* 3. Estilos de Prosa Legal */
+.legal-prose-content {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--text-muted);
+}
+
+.legal-block {
+  margin-top: 2.25rem;
+}
+
+.legal-block h2 {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  color: var(--c-bosque);
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+}
+
+.legal-data-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.legal-data-list strong {
+  color: var(--c-carbon);
+}
+
+.legal-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-block: 1rem;
+  font-size: 0.85rem;
+}
+
+.legal-table th,
+.legal-table td {
+  padding: 0.75rem;
+  border: 1px solid var(--line-stroke);
+  text-align: left;
+  vertical-align: top;
+}
+
+.legal-table th {
+  background-color: var(--bg-surface);
+  color: var(--c-bosque);
+  font-weight: 700;
+}
+
+.legal-meta-note {
+  margin-top: 3rem;
+  padding: 1rem;
+  background-color: var(--bg-surface);
+  border-left: 3px solid var(--c-terracota);
+  font-size: 0.8125rem;
+  color: var(--text-light);
+}
