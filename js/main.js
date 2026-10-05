@@ -1,5 +1,6 @@
 (() => {
   const d = document, root = d.documentElement;
+  root.classList.add('js');
   const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   requestAnimationFrame(() => requestAnimationFrame(() => root.classList.add('ready')));
