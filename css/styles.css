@@ -153,7 +153,7 @@ details p{padding:0 0 1.6rem;max-width:40rem}
 .js .reveal img{clip-path:inset(0 0 100% 0);transition:clip-path 1.5s var(--ease)}
 .js .reveal.in img{clip-path:inset(0)}
 
-@media(min-width:48em){
+@media(max-width:47.99em){.como .h2{white-space:normal}.como__item{min-width:0}.como__item p{max-width:none;overflow-wrap:break-word}}\n\n@media(min-width:48em){
 body{font-size:1.125rem}
 .bar{padding-inline:var(--pad)}
 .trail{right:1.6rem}
