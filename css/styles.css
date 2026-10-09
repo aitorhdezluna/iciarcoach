@@ -153,7 +153,13 @@ details p{padding:0 0 1.6rem;max-width:40rem}
 .js .reveal img{clip-path:inset(0 0 100% 0);transition:clip-path 1.5s var(--ease)}
 .js .reveal.in img{clip-path:inset(0)}
 
-@media(max-width:47.99em){.como .h2{white-space:normal}.como__item{min-width:0}.como__item p{max-width:none;overflow-wrap:break-word}}\n\n@media(min-width:48em){
+@media(max-width:47.99em){
+.como .h2{white-space:normal}
+.como__item{min-width:0}
+.como__item p{max-width:none;overflow-wrap:break-word}
+}
+
+@media(min-width:48em){
 body{font-size:1.125rem}
 .bar{padding-inline:var(--pad)}
 .trail{right:1.6rem}
@@ -164,7 +170,7 @@ body{font-size:1.125rem}
 .hero__txt{margin-top:0;padding-bottom:6rem;max-width:88rem}
 .hero__sign{display:block}
 .que{grid-template-columns:5fr 6fr;gap:clamp(3rem,8vw,9rem);align-items:start;padding-top:8rem}
-.que__fig{position:sticky;top:5rem;margin:0 0 0 calc(var(--pad)*-1)}
+.que__fig{position:sticky;top:5rem;width:min(100%,34rem);aspect-ratio:3/4;margin:0 0 0 calc(var(--pad)*-1)}
 .como{grid-template-columns:1fr;padding:11rem var(--pad)}
 .como__grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(2rem,5vw,6rem)}
 .como__item{align-content:start}
@@ -174,7 +180,7 @@ body{font-size:1.125rem}
 .call{padding-inline:var(--pad);align-items:flex-end;text-align:right}
 .call__h{max-width:12em}.call__p{max-width:26rem}
 .yo{grid-template-columns:5fr 6fr;align-items:center;gap:clamp(3rem,8vw,9rem);padding-block:10rem}
-.yo__fig{width:100%}
+.yo__fig{width:min(100%,29rem);justify-self:center}
  .voces{padding-block:9rem}
  .voces{padding-block:9rem}.voces__stage{max-width:62rem}
 .faq{margin-left:auto;margin-right:auto}
