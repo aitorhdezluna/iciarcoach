@@ -164,7 +164,7 @@ details p{padding:0 0 1.6rem;max-width:40rem}
 .como__item p{max-width:none;overflow-wrap:break-word}
 
 /* Ajustes exclusivos para móvil */
-.pause{min-height:0;padding:3.5rem var(--pad)}
+.pause{min-height:0;padding:2rem var(--pad)}
 .goal{min-height:0}
 .goal__img{object-position:55% 45%}
 .goal__t{padding:6.5rem var(--pad) 2rem}
