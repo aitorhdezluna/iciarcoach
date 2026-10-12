@@ -181,7 +181,7 @@ body{font-size:1.125rem}
 .como__item{align-content:start}
 .como__item:nth-child(2){padding-top:2.5rem}
 .como__item:nth-child(3){padding-top:5rem}
-.goal__img{object-position:50% 60%}
+.goal__img{object-position:50% 50%}
 .call{padding-inline:var(--pad);align-items:flex-end;text-align:right}
 .call__h{max-width:12em}.call__p{max-width:26rem}
 .yo{grid-template-columns:5fr 6fr;align-items:center;gap:clamp(3rem,8vw,9rem);padding-block:10rem}
