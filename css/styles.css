@@ -164,12 +164,13 @@ details p{padding:0 0 1.6rem;max-width:40rem}
 .como__item p{max-width:none;overflow-wrap:break-word}
 
 /* Ajustes exclusivos para móvil */
+.pause{min-height:0;padding:3.5rem var(--pad)}
 .goal{min-height:0}
-.goal__img{object-position:58% 42%}
-.goal__t{padding:12rem var(--pad) 2.5rem}
-.call{min-height:0;padding:4.5rem var(--pad)}
-.yo__fig{margin-inline:auto}
-.gift{min-height:0;padding:4.5rem var(--pad)}
+.goal__img{object-position:55% 45%}
+.goal__t{padding:6.5rem var(--pad) 2rem}
+.call{min-height:0;padding:3rem var(--pad)}
+.yo__fig{width:min(72%,22rem);margin-inline:auto;justify-self:center}
+.gift{min-height:0;padding:3rem var(--pad)}
 }
 
 @media(min-width:48em){
