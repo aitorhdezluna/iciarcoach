@@ -162,6 +162,14 @@ details p{padding:0 0 1.6rem;max-width:40rem}
 .como .h2{white-space:normal}
 .como__item{min-width:0}
 .como__item p{max-width:none;overflow-wrap:break-word}
+
+/* Ajustes exclusivos para móvil */
+.goal{min-height:0}
+.goal__img{object-position:58% 42%}
+.goal__t{padding:12rem var(--pad) 2.5rem}
+.call{min-height:0;padding:4.5rem var(--pad)}
+.yo__fig{margin-inline:auto}
+.gift{min-height:0;padding:4.5rem var(--pad)}
 }
 
 @media(min-width:48em){
