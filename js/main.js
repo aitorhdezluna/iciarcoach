@@ -60,7 +60,7 @@
 
     if (dot) dot.style.setProperty('--y', (y / max * (innerHeight - 7)) + 'px');
     if (bar) {
-      bar.classList.toggle('is-hidden', y > last && y > 120);
+      bar.classList.toggle('is-hidden', y > 120);
       last = y;
     }
 
